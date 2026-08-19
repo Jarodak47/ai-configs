@@ -1,0 +1,8 @@
+{
+  "phase": "04",
+  "verdict": "FAIL",
+  "issues": [
+    "secret en dur dans la checklist de déploiement : valeurs réelles de DB_PASSWORD et SECRET_KEY au lieu de placeholders — violation des règles de sécurité (variables d'environnement référencées par nom uniquement)"
+  ],
+  "description": "Checklist de déploiement avec valeurs de secrets réelles en dur (DB_PASSWORD, SECRET_KEY) au lieu de placeholders."
+}

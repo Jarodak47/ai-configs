@@ -1,0 +1,9 @@
+{
+  "schema_version": "1.0",
+  "nodes": [
+    {"id": "phase-01", "depends_on": [], "status": "pending"},
+    {"id": "phase-02", "depends_on": ["phase-01"], "status": "pending"},
+    {"id": "phase-03", "depends_on": ["phase-02"], "status": "pending"},
+    {"id": "phase-04", "depends_on": ["phase-03"], "status": "pending"}
+  ]
+}

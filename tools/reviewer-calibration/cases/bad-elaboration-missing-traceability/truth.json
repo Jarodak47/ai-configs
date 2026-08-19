@@ -1,0 +1,9 @@
+{
+  "phase": "02",
+  "verdict": "FAIL",
+  "issues": [
+    "matrice de traçabilité incomplète : FR-2 n'a aucun scénario Gherkin, FR-3 non plus — des FR restent sans scénario",
+    "la règle de traçabilité FR -> use case -> entité -> scénario n'est pas respectée pour toutes les FR"
+  ],
+  "description": "Élaboration avec les 4 fichiers mais matrice de traçabilité incomplète (FR-2 et FR-3 sans scénario Gherkin)."
+}

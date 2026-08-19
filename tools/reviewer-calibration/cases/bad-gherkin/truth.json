@@ -1,0 +1,9 @@
+{
+  "phase": "02",
+  "verdict": "FAIL",
+  "issues": [
+    "le scénario n'a pas de clause Then (aucun résultat attendu)",
+    "pas de vérifiable / résultat observable"
+  ],
+  "description": "Scénario Gherkin incomplet : Given/When sans Then."
+}

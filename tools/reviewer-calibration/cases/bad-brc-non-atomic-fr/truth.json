@@ -1,0 +1,9 @@
+{
+  "phase": "01",
+  "verdict": "FAIL",
+  "issues": [
+    "FR non atomiques : FR-1 regroupe création/modification/suppression/duplication/gestion de lignes/remises/envoi e-mail/suivi de lecture ; FR-2 regroupe recherche/tri/export",
+    "critères de succès non mesurables (« efficace », « rapide ») — pas de seuil quantifiable"
+  ],
+  "description": "BRC avec acteurs présents mais FR non atomiques (plusieurs exigences par FR) et critères de succès vagues."
+}

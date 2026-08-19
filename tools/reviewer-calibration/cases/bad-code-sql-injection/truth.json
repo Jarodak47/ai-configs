@@ -1,0 +1,10 @@
+{
+  "phase": "03",
+  "verdict": "FAIL",
+  "issues": [
+    "SQL injection : build_query construit la requête par concaténation de l'input utilisateur (username) dans la chaîne SQL",
+    "doit utiliser une requête paramétrée"
+  ],
+  "test_command": "python3 test_app.py",
+  "description": "Tests verts mais requête SQL construite par interpolation de l'input utilisateur — injection SQL exploitable."
+}

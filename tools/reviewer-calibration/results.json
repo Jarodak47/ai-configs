@@ -1,0 +1,2438 @@
+{
+  "runs": [
+    {
+      "ts": "2026-08-01 19:12",
+      "metrics": {
+        "accuracy": 0.8333333333333334,
+        "precision": 0.8,
+        "recall": 1.0,
+        "fn_rate": 0.0,
+        "fp_rate": 0.5,
+        "n": 6,
+        "tp": 4,
+        "fp": 1,
+        "fn": 0,
+        "tn": 1
+      },
+      "cases": [
+        {
+          "id": "bad-brc-missing-actors",
+          "phase": "01",
+          "truth": "FAIL",
+          "predicted": "FAIL",
+          "correct": true,
+          "note": ""
+        },
+        {
+          "id": "bad-code-failing-test",
+          "phase": "03",
+          "truth": "FAIL",
+          "predicted": "FAIL",
+          "correct": true,
+          "note": ""
+        },
+        {
+          "id": "bad-code-secret",
+          "phase": "03",
+          "truth": "FAIL",
+          "predicted": "FAIL",
+          "correct": true,
+          "note": ""
+        },
+        {
+          "id": "bad-gherkin",
+          "phase": "02",
+          "truth": "FAIL",
+          "predicted": "FAIL",
+          "correct": true,
+          "note": ""
+        },
+        {
+          "id": "good-brc",
+          "phase": "01",
+          "truth": "PASS",
+          "predicted": "FAIL",
+          "correct": false,
+          "note": ""
+        },
+        {
+          "id": "good-code",
+          "phase": "03",
+          "truth": "PASS",
+          "predicted": "PASS",
+          "correct": true,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "ts": "2026-08-01 19:12",
+      "metrics": {
+        "accuracy": 1.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "fn_rate": 0.0,
+        "fp_rate": 0.0,
+        "n": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1
+      },
+      "cases": [
+        {
+          "id": "good-brc",
+          "phase": "01",
+          "truth": "PASS",
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "BRC conforme : objectifs mesurables (O3 quantifié), 5 FR numérotées, atomiques et vérifiables, acteurs décrits, contraintes et critères de succès présents, traçabilité FR→objectifs couverte. Aucun secret, valeur codée en"
+        }
+      ]
+    },
+    {
+      "ts": "2026-08-01 19:14",
+      "metrics": {
+        "accuracy": 0.8333333333333334,
+        "precision": 0.8,
+        "recall": 1.0,
+        "fn_rate": 0.0,
+        "fp_rate": 0.5,
+        "n": 6,
+        "tp": 4,
+        "fp": 1,
+        "fn": 0,
+        "tn": 1
+      },
+      "cases": [
+        {
+          "id": "bad-brc-missing-actors",
+          "phase": "01",
+          "truth": "FAIL",
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Acteurs absents (aucune section Acteurs ni Titre/contexte) ; objectifs non mesurables (\"en temps réel\") ; CS-01 seul critère, sans traçabilité chiffrée vers O1/O2. \u001b[93m\u001b[1m! \u001b[0m agent \"reviewer\" is a subagent, not a pr"
+        },
+        {
+          "id": "bad-code-failing-test",
+          "phase": "03",
+          "truth": "FAIL",
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Tests exécutés réellement (python3 test_add.py) : AssertionError — `add(1,2)` retourne 4 au lieu de 3 (bug `+1` codé en dur dans add.py:3). Le code ne satisfait pas les tests, la phase 03 ne passe pas. \u001b[93m\u001b[1m! \u001b[0m ag"
+        },
+        {
+          "id": "bad-code-secret",
+          "phase": "03",
+          "truth": "FAIL",
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Aucun test ni lint exécutable fourni (un seul fichier `config.py`, pas de test/lint à lancer) ; secret Stripe codé en dur dans le code, violation de la checklist « no secrets, .env.example required » et des conventions d"
+        },
+        {
+          "id": "bad-gherkin",
+          "phase": "02",
+          "truth": "FAIL",
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Livrable incomplet pour la Phase 02 : seul un fichier `gherkin.feature` tronqué est présent, sans le BRC ni les 3 autres livrables requis (business-use-cases, entity-model, system-use-cases). Le scénario Gherkin est inco"
+        },
+        {
+          "id": "good-brc",
+          "phase": "01",
+          "truth": "PASS",
+          "predicted": "FAIL",
+          "correct": false,
+          "reason": "- Section \"Titre et contexte\" (contexte, date) absente du BRC. - Traçabilité Objectifs→FR incomplète : O1 et O3 ne sont couverts par aucune FR explicite, la section Traçabilité ne mappe que vers la Phase 02. \u001b[93m\u001b[1m! \u001b"
+        },
+        {
+          "id": "good-code",
+          "phase": "03",
+          "truth": "PASS",
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Tests exécutés (`python3 test_sum_evens.py` → OK, exit 0) couvrant cas nominaux, vide, entiers impairs et négatifs. Code documenté, nommage cohérent, aucun secret ni valeur codée en dur. \u001b[93m\u001b[1m! \u001b[0m agent \"reviewer\" "
+        }
+      ]
+    },
+    {
+      "ts": "2026-08-02 01:06",
+      "metrics": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "fn_rate": 0.0,
+        "fp_rate": 0.0,
+        "n": 6,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "tn": 2
+      },
+      "cases": [
+        {
+          "id": "bad-brc-missing-actors",
+          "phase": "01",
+          "truth": "FAIL",
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Absence de la section \"Acteurs\" (aucun acteur décrit, seul le terme \"libraire\" est cité dans les objectifs) — la checklist exige que tous les acteurs soient identifiés avec une description de rôle. Section \"Titre et cont"
+        },
+        {
+          "id": "bad-code-failing-test",
+          "phase": "03",
+          "truth": "FAIL",
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Le test échoue réellement (`python3 test_add.py` → AssertionError ligne 4) : `add(1,2)` retourne 4 au lieu de 3 à cause du `+ 1` codé en dur dans add.py:3. Code et tests non conformes. \u001b[93m\u001b[1m! \u001b[0m agent \"reviewer\" is"
+        },
+        {
+          "id": "bad-code-secret",
+          "phase": "03",
+          "truth": "FAIL",
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Secret Stripe key en clair codé en dur (config.py:3, `sk_live_...`) ; aucun test ni lint fourni à exécuter ; livrable incomplet (code+tests+checklist exigés par la phase 03). \u001b[93m\u001b[1m! \u001b[0m agent \"reviewer\" is a subagen"
+        },
+        {
+          "id": "bad-gherkin",
+          "phase": "02",
+          "truth": "FAIL",
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Le livrable ne contient qu'un `gherkin.feature` tronqué (pas de `Alors`, scénario incomplet) et aucune des livrables exigés de la phase 02 (`business-use-cases.md`, `entity-model.md`, `system-use-cases.md`, `test-cases.m"
+        },
+        {
+          "id": "good-brc",
+          "phase": "01",
+          "truth": "PASS",
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Objectives mesurables (O3 quantifié), tous les acteurs décrits, FR numérotées et atomiques, chaque objectif couvert par au moins une FR, contraintes et critères de succès vérifiables présents. Aucun secret ni valeur codé"
+        },
+        {
+          "id": "good-code",
+          "phase": "03",
+          "truth": "PASS",
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Tests exécutés (`python3 test_sum_evens.py` → OK, exit 0) avec couverture des cas nominaux, vides et sans pairs ; code propre sans secrets ni valeurs codées en dur, nommage conforme (snake_case descriptif). \u001b[93m\u001b[1m! \u001b["
+        }
+      ]
+    },
+    {
+      "ts": "2026-08-02 01:14",
+      "metrics": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "fn_rate": 0.0,
+        "fp_rate": 0.0,
+        "n": 6,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "tn": 2
+      },
+      "cases": [
+        {
+          "id": "bad-brc-missing-actors",
+          "phase": "01",
+          "truth": "FAIL",
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "La checklist BRC exige \"tous les acteurs identifiés avec description de rôle\" : la section Acteurs est absente du livrable. Le reste (objectifs, FR numérotées/atomiques, contraintes, critères de succès) est conforme. ! a"
+        },
+        {
+          "id": "bad-code-failing-test",
+          "phase": "03",
+          "truth": "FAIL",
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "- Test réellement exécuté : `assert add(1, 2) == 3` échoue (AssertionError) car `add.py` retourne `a + b + 1` au lieu de `a + b` — « tests pass » non satisfait. - Bugs de logique (off-by-one) dans le code livré, non attr"
+        },
+        {
+          "id": "bad-code-secret",
+          "phase": "03",
+          "truth": "FAIL",
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Le livrable est un unique fichier de 3 lignes : aucun use case implémenté, aucun test à exécuter (rien à lancer pour vérifier \"tests pass && lint clean\"), aucune traçabilité ni doc. Pire : la clé Stripe secrète est codée"
+        },
+        {
+          "id": "bad-gherkin",
+          "phase": "02",
+          "truth": "FAIL",
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Livrable incomplet : 3/4 livrables de la phase 02 absents (business-use-cases.md, entity-model.md, system-use-cases.md, test-cases.md ne sont pas présents). Le fichier gherkin.feature unique est non conforme : scénario i"
+        },
+        {
+          "id": "good-brc",
+          "phase": "01",
+          "truth": "PASS",
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Objectifs mesurables (O3 quantifié), acteurs décrits, FR-01 à FR-05 numérotées/atomiques/vérifiables avec traçabilité complète vers les objectifs (O1→FR-01/02/05, O2→FR-03, O3→FR-04). Contraintes et critères de succès vé"
+        },
+        {
+          "id": "good-code",
+          "phase": "03",
+          "truth": "PASS",
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Tests executed (`python3 test_sum_evens.py` → `OK`, exit 0), code matches Python stack conventions (snake_case, Google-style docstring), no secrets or hardcoded sensitive values, and no env vars required so no `.env.exam"
+        }
+      ]
+    },
+    {
+      "ts": "2026-08-02 01:20",
+      "metrics": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "fn_rate": 0.0,
+        "fp_rate": 0.0,
+        "n": 6,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "tn": 2
+      },
+      "cases": [
+        {
+          "id": "bad-brc-missing-actors",
+          "phase": "01",
+          "truth": "FAIL",
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Absence de la section \"Acteurs\" avec descriptions de rôles (l'acteur libraire n'est pas identifié), et traceabilité incomplète : O1 \"suivre les stocks en temps réel\" n'est couvert par aucune FR (aucune capacité de consul"
+        },
+        {
+          "id": "bad-code-failing-test",
+          "phase": "03",
+          "truth": "FAIL",
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Les tests échouent à l'exécution (AssertionError sur `add(1,2)`) : `add.py` contient un bug (`return a + b + 1`), et le test `add(0,0) == 0` échouerait aussi. Code+tests non conformes à la checklist phase 03. ! agent \"re"
+        },
+        {
+          "id": "bad-code-secret",
+          "phase": "03",
+          "truth": "FAIL",
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Livrable quasi vide : un seul fichier `config.py` sans code applicatif, spécifications de cas d'usage ni tests (checklist Phase 03 non satisfaite). Secret Stripe codé en dur (`sk_live_...` dans config.py:3) et violation "
+        },
+        {
+          "id": "bad-gherkin",
+          "phase": "02",
+          "truth": "FAIL",
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Livrable incomplet : un seul fichier `gherkin.feature` à la racine au lieu des 4 livrables dans `docs/02-elaboration/` (business-use-cases, entity-model, system-use-cases, test-cases). Scénario Gherkin incomplet (pas de "
+        },
+        {
+          "id": "good-brc",
+          "phase": "01",
+          "truth": "PASS",
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Tous les items de la checklist BRC sont couverts : objectifs mesurables (O3), acteurs avec rôle, FR numérotées/atomiques/vérifiables, traçabilité objectif↔FR, contraintes et critères de succès vérifiables. Aucun écart re"
+        },
+        {
+          "id": "good-code",
+          "phase": "03",
+          "truth": "PASS",
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Tests exécutés réellement (`python3 test_sum_evens.py` → \"OK\"), compilation OK, un fichier de test par source, docstrings conformes, aucun secret ni valeur codée en dur, nommage snake_case conforme. ! agent \"reviewer\" is"
+        }
+      ]
+    },
+    {
+      "ts": "2026-08-02 01:41",
+      "metrics": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "fn_rate": 0.0,
+        "fp_rate": 0.0,
+        "n": 6,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "tn": 2
+      },
+      "cases": [
+        {
+          "id": "bad-brc-missing-actors",
+          "phase": "01",
+          "truth": "FAIL",
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "- Absence de section « Acteurs » avec rôles — exigence de la checklist non couverte. - Traceabilité manquante : O1 (« suivre les stocks en temps réel ») n'est couvert par aucune FR (aucune FR de consultation du stock), e"
+        },
+        {
+          "id": "bad-code-failing-test",
+          "phase": "03",
+          "truth": "FAIL",
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Tests executés réellement (`python3 test_add.py`) : AssertionError sur `add(1, 2) == 3` — la fonction retourne `a + b + 1` (bug). Le livrable code+tests ne passe pas la validation. ! agent \"reviewer\" is a subagent, not a"
+        },
+        {
+          "id": "bad-code-secret",
+          "phase": "03",
+          "truth": "FAIL",
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Secret Stripe codé en dur (`sk_live_...`) dans config.py:1, aucun test/lint fourni à exécuter, et livrable Phase 03 incomplet (pas de code applicatif ni de tests). ! agent \"reviewer\" is a subagent, not a primary agent. F"
+        },
+        {
+          "id": "bad-gherkin",
+          "phase": "02",
+          "truth": "FAIL",
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Absence des quatre livrables requis (`business-use-cases.md`, `entity-model.md`, `system-use-cases.md`, `test-cases.md`) sous `docs/02-elaboration/`; le seul fichier `gherkin.feature` est incomplet (scénario sans étape `"
+        },
+        {
+          "id": "good-brc",
+          "phase": "01",
+          "truth": "PASS",
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Objectifs mesurables (O3), acteurs avec rôles, FR-01→FR-05 numérotées/atomiques/vérifiables, traçabilité objectifs→FR complète, contraintes et critères de succès présents, aucun secret ni valeur codée en dur. ! agent \"re"
+        },
+        {
+          "id": "good-code",
+          "phase": "03",
+          "truth": "PASS",
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Tests exécutés réellement (OK), code et tests présents, nommage snake_case conforme, aucune valeur codée en dur ni secret. ! agent \"reviewer\" is a subagent, not a primary agent. Falling back to default agent > build · bi"
+        }
+      ]
+    },
+    {
+      "ts": "2026-08-02 01:51",
+      "metrics": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "fn_rate": 0.0,
+        "fp_rate": 0.0,
+        "n": 8,
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "tn": 2
+      },
+      "cases": [
+        {
+          "id": "bad-brc-missing-actors",
+          "phase": "01",
+          "truth": "FAIL",
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "- Section \"Acteurs\" entièrement absente (obligatoire, avec description de rôle). - Titre sans \"contexte\"/date exigé par la structure. - Objectifs non mesurables et CS-01 non rattaché aux objectifs. ! agent \"reviewer\" is "
+        },
+        {
+          "id": "bad-code-failing-test",
+          "phase": "03",
+          "truth": "FAIL",
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Tests fail when actually run: `add` returns `a + b + 1`, so `add(1, 2)` gives 4, not the asserted 3 (test_add.py:4), and `add(0, 0)` gives 1, not 0. No passing test, no lint, no `.env`/secrets requirement — Phase 03 \"tes"
+        },
+        {
+          "id": "bad-code-idor-missing-ownership",
+          "phase": "03",
+          "truth": "FAIL",
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "- `get_user_profile(user_id)` (app.py:4) souffre d'un IDOR : aucun contrôle d'autorisation entre l'appelant authentifié et le `user_id` demandé, permettant à tout utilisateur de lire le profil d'autrui (y compris rôle ad"
+        },
+        {
+          "id": "bad-code-secret",
+          "phase": "03",
+          "truth": "FAIL",
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "- Secret codé en dur (`sk_live_fake-1234-fake-secret-key`) dans `config.py` — violation directe de la checklist (« No secrets in code, .env.example present ») ; aucune variable d'env. - Aucun test ni lint fournis (pytest"
+        },
+        {
+          "id": "bad-gherkin",
+          "phase": "02",
+          "truth": "FAIL",
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Le livrable ne contient qu'un fichier `gherkin.feature` à la racine : il manque les quatre livrables `docs/02-elaboration/` (business-use-cases, entity-model, system-use-cases, test-cases), la matrice de traçabilité FR→c"
+        },
+        {
+          "id": "bad-transition-missing-uat-mapping",
+          "phase": "04",
+          "truth": "FAIL",
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "UAT scenarios lack FR/success-criteria mapping; improvement backlog has no P0/P1/P2 prioritization and no traceable feedback source; no docs/status.md proving prior phases passed. ! agent \"reviewer\" is a subagent, not a "
+        },
+        {
+          "id": "good-brc",
+          "phase": "01",
+          "truth": "PASS",
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Objectifs mesurables (dont O3 quantifié), acteurs décrits, FR-01..05 numérotées/atomiques/vérifiables, traçabilité objectif↔FR complète, contraintes et critères de succès présents, aucun scope inventé, pas de secrets. ! "
+        },
+        {
+          "id": "good-code",
+          "phase": "03",
+          "truth": "PASS",
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Tests exécutés avec succès (OK), code fonctionnel conforme, pas de secrets ni de valeurs en dur, pas de vulnérabilité évidente. ! agent \"reviewer\" is a subagent, not a primary agent. Falling back to default agent > build"
+        }
+      ]
+    },
+    {
+      "ts": "2026-08-02 07:52",
+      "metrics": {
+        "accuracy": 0.8333333333333334,
+        "precision": 0.8285714285714286,
+        "recall": 0.9666666666666667,
+        "fn_rate": 0.03333333333333333,
+        "fp_rate": 0.5,
+        "n": 42,
+        "tp": 29,
+        "fp": 6,
+        "fn": 1,
+        "tn": 6,
+        "runs": 3,
+        "stable_cases": 13,
+        "instable_cases": [
+          "bad-code-idor-missing-ownership"
+        ]
+      },
+      "cases": [
+        {
+          "id": "bad-brc-missing-actors",
+          "phase": "01",
+          "truth": "FAIL",
+          "run": 1,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "- Section \"Acteurs\" entièrement absente (exigence explicite de la checklist et de la structure BRC). - Section \"Titre et contexte\" incomplète : pas de contexte, ni de date. - Objectif O1 \"en temps réel\" non mesurable. ! "
+        },
+        {
+          "id": "bad-brc-missing-actors",
+          "phase": "01",
+          "truth": "FAIL",
+          "run": 2,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Checklist incomplète : la section **Acteurs** (acteurs humains/systèmes avec rôle) est absente du BRC, alors qu'elle est requise par la checklist de validation de la phase 01. ! agent \"reviewer\" is a subagent, not a prim"
+        },
+        {
+          "id": "bad-brc-missing-actors",
+          "phase": "01",
+          "truth": "FAIL",
+          "run": 3,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Section Acteurs absente — la checklist exige que tous les acteurs soient identifiés avec leur rôle. De plus O1 (« suivre les stocks en temps réel ») n'est pas mesurable. Le reste (FR atomiques, couverture objectifs, cont"
+        },
+        {
+          "id": "bad-brc-non-atomic-fr",
+          "phase": "01",
+          "truth": "FAIL",
+          "run": 1,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Checklist failures : objectifs non mesurables (aucune cible chiffrée) ; acteurs sans description de rôle ; FR-1/FR-2 non atomiques (multiples capacités liées par « et ») ; critères de succès non vérifiables (« efficace »"
+        },
+        {
+          "id": "bad-brc-non-atomic-fr",
+          "phase": "01",
+          "truth": "FAIL",
+          "run": 2,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Objectifs non mesurables et critères de succès non vérifiables (« efficace », « rapides ») ; acteurs sans description de rôle ; FR-1 non atomique (découpe CRUD + lignes/remises + e-mail + suivi en une seule exigence, num"
+        },
+        {
+          "id": "bad-brc-non-atomic-fr",
+          "phase": "01",
+          "truth": "FAIL",
+          "run": 3,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "FRs non atomiques (FR-1/FR-2 combinent plusieurs comportements via « et »), critères de succès subjectifs non vérifiables (« efficace », « rapides »), acteurs sans description de rôle, objectifs non mesurables. ! agent \""
+        },
+        {
+          "id": "bad-code-failing-test",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 1,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Tests échouent (`python3 test_add.py` → AssertionError, exit 1) : le code contient un bug `add(1,2)==4`. Aucun docs BRC/élaboration/traçabilité, ni checklist, ni documentation fournis en Phase 03. ! agent \"reviewer\" is a"
+        },
+        {
+          "id": "bad-code-failing-test",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 2,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "`python3 test_add.py` échoue (AssertionError sur add(1,2) : retourne 4 au lieu de 3) — les tests ne passent pas, le code contient un bug (`+1`) et ne satisfait pas les spécifications. ! agent \"reviewer\" is a subagent, no"
+        },
+        {
+          "id": "bad-code-failing-test",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 3,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Tests exécutés (`python3 test_add.py`) échouent : `add(1,2)` retourne 4 (bug `+1` codé en dur dans add.py:3), assertion `== 3` levée. ! agent \"reviewer\" is a subagent, not a primary agent. Falling back to default agent >"
+        },
+        {
+          "id": "bad-code-idor-missing-ownership",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 1,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Tests pass (`python3 test_app.py` → OK), no secrets, naming conforme, mais `get_user_profile(user_id)`/`render_profile_page` exposent le profil admin (id=1) à n'importe quel appelant sans aucun contrôle d'appartenance/au"
+        },
+        {
+          "id": "bad-code-idor-missing-ownership",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 2,
+          "predicted": "PASS",
+          "correct": false,
+          "reason": "Tests executés réellement (`python3 test_app.py` → \"OK\") et passent ; pas de secrets ni valeurs sensibles en dur, nommage snake_case conforme, entrée utilisée comme clé dict sans injection. L'authentification est explici"
+        },
+        {
+          "id": "bad-code-idor-missing-ownership",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 3,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Tests pass (`python3 test_app.py` → OK), but `get_user_profile(user_id)` enforces no authorization: any caller can read any profile (IDOR), despite the docstring claiming identity is resolved upstream, and input isn't va"
+        },
+        {
+          "id": "bad-code-secret",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 1,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Secret Stripe API codé en dur dans config.py (config.py:3) — violation critique de la checklist sécurité. Aucun fichier de test/lint fourni à exécuter. ! agent \"reviewer\" is a subagent, not a primary agent. Falling back "
+        },
+        {
+          "id": "bad-code-secret",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 2,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Secret Stripe codé en dur dans config.py (sk_live_...) ; aucun test ni lint fourni pour la phase 03 code+tests, et aucun code fonctionnel. ! agent \"reviewer\" is a subagent, not a primary agent. Falling back to default ag"
+        },
+        {
+          "id": "bad-code-secret",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 3,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Secret Stripe codé en dur (`sk_live_...`) dans config.py — violation de sécurité; aucun test/lint à exécuter, livrable incomplet pour la phase 03. ! agent \"reviewer\" is a subagent, not a primary agent. Falling back to de"
+        },
+        {
+          "id": "bad-code-sql-injection",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 1,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Test réellement exécuté échoue (`sqlite3.OperationalError: no such table: users`, test_app.py:4). Code vulnérable : injection SQL par concaténation non paramétrée (app.py:5) et input non validé. ! agent \"reviewer\" is a s"
+        },
+        {
+          "id": "bad-code-sql-injection",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 2,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Les tests échouent à l'exécution (sqlite3.OperationalError: no such table: users) et le code contient une injection SQL par concaténation non paramétrée (app.py:5) sans validation d'entrée. ! agent \"reviewer\" is a subage"
+        },
+        {
+          "id": "bad-code-sql-injection",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 3,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "- `python3 test_app.py` échoue (sqlite3.OperationalError: no such table: users) — les tests ne passent pas. - Injection SQL évidente : `build_query` concatène l'input sans paramétrisation (app.py:5), input non validé. ! "
+        },
+        {
+          "id": "bad-elaboration-missing-traceability",
+          "phase": "02",
+          "truth": "FAIL",
+          "run": 1,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "- Matrice de traçabilité incomplète : FR-2 et FR-3 n'ont aucun scénario Gherkin (« — »), donc pas de couverture ≥1 scénario par FR exigée. - Seulement 2 blocs « Fonctionnalité » pour 3 FR, et « Envoyer une facture par e-"
+        },
+        {
+          "id": "bad-elaboration-missing-traceability",
+          "phase": "02",
+          "truth": "FAIL",
+          "run": 2,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "- Matrice de traçabilité incomplète : FR-2 sans entité, FR-3 sans scénario Gherkin (« — »). - FR-3 sans bloc `Fonctionnalité` ; FR-2 sans scénario d'erreur/edge (1 scénario, happy path seul) → règle « happy path + ≥1 edg"
+        },
+        {
+          "id": "bad-elaboration-missing-traceability",
+          "phase": "02",
+          "truth": "FAIL",
+          "run": 3,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "- Matrice de traçabilité incomplète : FR-2 et FR-3 n'ont aucun scénario Gherkin (et FR-2 n'a pas d'entité), donc « ≥1 scénario par FR » non respecté. - Pas un bloc `Fonctionnalité` par FR (2 blocs pour 3 FR) et scénario "
+        },
+        {
+          "id": "bad-gherkin",
+          "phase": "02",
+          "truth": "FAIL",
+          "run": 1,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Le livrable ne contient qu'un fichier Gherkin (`gherkin.feature`) hors de `docs/02-elaboration/` : il manque `business-use-cases.md`, `entity-model.md`, `system-use-cases.md`, la matrice de traçabilité FR→use case→entité"
+        },
+        {
+          "id": "bad-gherkin",
+          "phase": "02",
+          "truth": "FAIL",
+          "run": 2,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "- Livrables phase 02 absents : le répertoire ne contient qu'un `gherkin.feature`, aucun des 4 fichiers requis (`business-use-cases.md`, `entity-model.md`, `system-use-cases.md`, `test-cases.md`). - Le scénario est incomp"
+        },
+        {
+          "id": "bad-gherkin",
+          "phase": "02",
+          "truth": "FAIL",
+          "run": 3,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Le livrable ne contient qu'un fichier `gherkin.feature` (incomplet, sans `Alors` ni scénario d'erreur) et aucun des quatre fichiers requis (`docs/02-elaboration/`: business-use-cases.md, entity-model.md, system-use-cases"
+        },
+        {
+          "id": "bad-transition-missing-uat-mapping",
+          "phase": "04",
+          "truth": "FAIL",
+          "run": 1,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "UAT scenarios not mapped to any FR/success criterion; improvement backlog lacks P0/P1/P2 priorities and feedback traceability; no `docs/status.md` loop log proving prior phases passed. ! agent \"reviewer\" is a subagent, n"
+        },
+        {
+          "id": "bad-transition-missing-uat-mapping",
+          "phase": "04",
+          "truth": "FAIL",
+          "run": 2,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "- Aucun scénario UAT (uat-plan.md) n'est mappé à une exigence fonctionnelle ni à un critère de succès du BRC. - Le backlog d'amélioration (improvement-backlog.md) n'est ni priorisé (P0/P1/P2) ni traçable vers des sources"
+        },
+        {
+          "id": "bad-transition-missing-uat-mapping",
+          "phase": "04",
+          "truth": "FAIL",
+          "run": 3,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Scénarios UAT non mappés à des FR/succès (checklist item 2) ; backlog non priorisé P0/P1/P2 et non traçable (item 6) ; `docs/status.md` absent (item 7). ! agent \"reviewer\" is a subagent, not a primary agent. Falling back"
+        },
+        {
+          "id": "bad-transition-secret-in-checklist",
+          "phase": "04",
+          "truth": "FAIL",
+          "run": 1,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "- Secrets réels commis dans deployment-checklist.md (`DB_PASSWORD`, `SECRET_KEY`) au lieu de placeholders. - Checklist de déploiement sans section monitoring ; `docs/status.md` absent (antécédents de phases non vérifiabl"
+        },
+        {
+          "id": "bad-transition-secret-in-checklist",
+          "phase": "04",
+          "truth": "FAIL",
+          "run": 2,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Secrets réels en dur dans deployment-checklist.md (DB_PASSWORD, SECRET_KEY) au lieu de placeholders ; checklist de déploiement sans volet monitoring ; pas de loop log (docs/status.md). ! agent \"reviewer\" is a subagent, n"
+        },
+        {
+          "id": "bad-transition-secret-in-checklist",
+          "phase": "04",
+          "truth": "FAIL",
+          "run": 3,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Deployment checklist leaks real secret values (`DB_PASSWORD`, `SECRET_KEY`) instead of placeholders, lacks monitoring coverage, and no `docs/status.md` loop log confirms prior phases passed. ! agent \"reviewer\" is a subag"
+        },
+        {
+          "id": "good-brc",
+          "phase": "01",
+          "truth": "PASS",
+          "run": 1,
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Objectifs mesurables (O3 quantifié), acteurs décrits, FR-01..05 numérotées/atomiques/vérifiables, traçabilité objectifs→FR présente, contraintes et critères de succès vérifiables. Aucun code présent, donc aucun risque se"
+        },
+        {
+          "id": "good-brc",
+          "phase": "01",
+          "truth": "PASS",
+          "run": 2,
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Checklist 01 complète : objectifs mesurables, acteurs décrits, FR-01..05 numérotées/atomiques/vérifiables, traçabilité O↔FR explicitée, contraintes et critères de succès vérifiables présents, aucun périmètre inventé ni s"
+        },
+        {
+          "id": "good-brc",
+          "phase": "01",
+          "truth": "PASS",
+          "run": 3,
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Checklist BRC conforme : objectifs mesurables, acteurs décrits, FR numérotées/atomiques/vérifiables, traçabilité objectifs→FR complète, contraintes et critères de succès présents. Aucun code ni secret à contrôler. ! agen"
+        },
+        {
+          "id": "good-code",
+          "phase": "03",
+          "truth": "PASS",
+          "run": 1,
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Tests exécutés réellement (python3 test_sum_evens.py → OK), logique correcte, nommage conforme, aucun secret ni valeur codée en dur, pas de vulnérabilité applicable à une fonction pure. ! agent \"reviewer\" is a subagent, "
+        },
+        {
+          "id": "good-code",
+          "phase": "03",
+          "truth": "PASS",
+          "run": 2,
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Tests exécutés réellement (`python3 test_sum_evens.py` → OK). Code fonctionnel, nommage conforme, aucun secret ni valeur codée en dur, pas de vulnérabilité évidente. File: sum_evens.py:1, test_sum_evens.py:4 ! agent \"rev"
+        },
+        {
+          "id": "good-code",
+          "phase": "03",
+          "truth": "PASS",
+          "run": 3,
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Tests executed (`python3 test_sum_evens.py` → OK) and all assertions pass. No secrets or hardcoded values, naming conform, and the pure function has no auth/IDOR/input-validation surface. ! agent \"reviewer\" is a subagent"
+        },
+        {
+          "id": "good-elaboration",
+          "phase": "02",
+          "truth": "PASS",
+          "run": 1,
+          "predicted": "FAIL",
+          "correct": false,
+          "reason": "- FR-2 (Annulation) et FR-3 (Créer salle) n'ont qu'un scénario Gherkin : aucun scénario d'erreur/limite requis par la checklist (ex. annulation < 24 h, capacité non positive). - U4 (Désactiver une salle) est dans le diag"
+        },
+        {
+          "id": "good-elaboration",
+          "phase": "02",
+          "truth": "PASS",
+          "run": 2,
+          "predicted": "FAIL",
+          "correct": false,
+          "reason": "- Livrables non placés sous `docs/02-elaboration/` et absence du BRC empêchant de vérifier la couverture des acteurs et l'exhaustivité FR-XX de la matrice. - Gherkin : FR-2 et FR-3 n'ont qu'un scénario happy path, sans s"
+        },
+        {
+          "id": "good-elaboration",
+          "phase": "02",
+          "truth": "PASS",
+          "run": 3,
+          "predicted": "FAIL",
+          "correct": false,
+          "reason": "Scénarios Gherkin incomplets : FR-2 (Annulation) et FR-3 (Créer salle) n'ont chacun qu'un scénario nominal, sans scénario d'erreur/limite (ex. annulation après 24 h, capacité non valide) — la checklist exige happy path +"
+        },
+        {
+          "id": "good-transition",
+          "phase": "04",
+          "truth": "PASS",
+          "run": 1,
+          "predicted": "FAIL",
+          "correct": false,
+          "reason": "- Loop log `docs/status.md` absent : impossible de confirmer que les phases antérieures ont passé (checklist, point 7). - Conformité de nommage : livrables fusionnés dans `feedback-and-backlog.md` au lieu de `feedback-re"
+        },
+        {
+          "id": "good-transition",
+          "phase": "04",
+          "truth": "PASS",
+          "run": 2,
+          "predicted": "FAIL",
+          "correct": false,
+          "reason": "Les 3 livrables couvrent bien les items 1-6 de la checklist (périmètre/acteurs/critères UAT, traçage FR-CS, env par nom/migrations/backup/rollback/monitoring, template structuré, backlog P0-P2 tracé), sans secret ni vale"
+        },
+        {
+          "id": "good-transition",
+          "phase": "04",
+          "truth": "PASS",
+          "run": 3,
+          "predicted": "FAIL",
+          "correct": false,
+          "reason": "- Checklist item non satisfait : aucune trace `docs/status.md` (loop log montrant le passage des phases précédentes) dans le livrable. - Le reste est conforme (UAT scénarios→FR/CS, checklist déploiement env/migrations/ba"
+        }
+      ]
+    },
+    {
+      "ts": "2026-08-02 08:26",
+      "metrics": {
+        "accuracy": 0.9714285714285714,
+        "precision": 1.0,
+        "recall": 0.9666666666666667,
+        "fn_rate": 0.03333333333333333,
+        "fp_rate": 0.0,
+        "n": 35,
+        "tp": 29,
+        "fp": 0,
+        "fn": 1,
+        "tn": 5,
+        "runs": 3,
+        "stable_cases": 11,
+        "instable_cases": [
+          "bad-code-idor-missing-ownership"
+        ]
+      },
+      "cases": [
+        {
+          "id": "bad-brc-missing-actors",
+          "phase": "01",
+          "truth": "FAIL",
+          "run": 1,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Section \"Acteurs\" absente (aucun acteur identifié avec rôle), et le \"Titre et contexte\" est incomplet (pas de contexte/date). Objectifs, FR, contraintes et critères de succès sont sinon présents et vérifiables; pas de co"
+        },
+        {
+          "id": "bad-brc-missing-actors",
+          "phase": "01",
+          "truth": "FAIL",
+          "run": 2,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "- Section \"Acteurs\" absente (la checklist l'exige avec rôles pour chaque acteur). - O1 (\"suivre les stocks en temps réel\") non mesurable et sans FR de traçabilité (aucun FR de consultation/suivi de stock). - Section \"Tit"
+        },
+        {
+          "id": "bad-brc-missing-actors",
+          "phase": "01",
+          "truth": "FAIL",
+          "run": 3,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Section \"Acteurs\" absente (aucun acteur identifié avec rôle) — élément obligatoire de la checklist BRC. Les FR utilisent « permet de » au lieu du format « Le système doit <verbe> ». ! agent \"reviewer\" is a subagent, not "
+        },
+        {
+          "id": "bad-brc-non-atomic-fr",
+          "phase": "01",
+          "truth": "FAIL",
+          "run": 1,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "- FRs non atomiques : FR-1 cumule création, modification, suppression, duplication, lignes, remises, e-mail et suivi via \"et\" (violation explicite). - Acteurs sans description de rôle ; critères de succès non vérifiables"
+        },
+        {
+          "id": "bad-brc-non-atomic-fr",
+          "phase": "01",
+          "truth": "FAIL",
+          "run": 2,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "FRs non atomiques (FR-1 et FR-2 combinent plusieurs capacités avec « et »), acteurs sans description de rôle, objectifs et critères de succès non mesurables/vérifiables (« efficace », « rapides »). ! agent \"reviewer\" is "
+        },
+        {
+          "id": "bad-brc-non-atomic-fr",
+          "phase": "01",
+          "truth": "FAIL",
+          "run": 3,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "- FRs non atomiques : FR-1, FR-2 et FR-3 combinent plusieurs capacités (\"et\"). - Objectifs non mesurables et critères de succès non vérifiables (\"efficace\", \"rapides\"). - Acteurs sans description de rôle. ! agent \"review"
+        },
+        {
+          "id": "bad-code-failing-test",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 1,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Tests échouent à l'exécution : `add(1,2)` retourne 4 (bug `+1` dans add.py:3) alors que l'assert attend 3. Code non conforme au comportement attendu. ! agent \"reviewer\" is a subagent, not a primary agent. Falling back to"
+        },
+        {
+          "id": "bad-code-failing-test",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 2,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Les tests échouent (AssertionError) : `add(1,2)` retourne 4 au lieu de 3 car `add.py:2` ajoute indûment `+ 1`. ! agent \"reviewer\" is a subagent, not a primary agent. Falling back to default agent > build · big-pickle $ l"
+        },
+        {
+          "id": "bad-code-failing-test",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 3,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Tests réels exécutés (`python3 test_add.py`) : assertion `add(1,2) == 3` échoue car `add` retourne `a+b+1` (bug de code). Le livrable Phase 03 ne passe pas sa propre suite de tests. ! agent \"reviewer\" is a subagent, not "
+        },
+        {
+          "id": "bad-code-idor-missing-ownership",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 1,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Tests pass (\"OK\") mais `get_user_profile` est une faille IDOR : aucun contrôle d'autorisation sur l'`user_id` passé (n'importe quel appelant peut lire le profil d'un autre utilisateur), et `render_profile_page` injecte d"
+        },
+        {
+          "id": "bad-code-idor-missing-ownership",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 2,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Tests pass (OK), pas de secrets, mais `get_user_profile` expose le profil de n'importe quel `user_id` sans contrôle d'autorisation (IDOR), et `render_profile_page` injecte la sortie brute dans du HTML sans échappement (r"
+        },
+        {
+          "id": "bad-code-idor-missing-ownership",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 3,
+          "predicted": "PASS",
+          "correct": false,
+          "reason": "Tests exécutés (python3 test_app.py) : OK. Nommage snake_case conforme, aucun secret ni valeur codée en dur sensible, aucune vulnérabilité évidente (auth résolue en amont selon la docstring du handler). ! agent \"reviewer"
+        },
+        {
+          "id": "bad-code-secret",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 1,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Secret Stripe en clair codé en dur dans `config.py:4` (vulnérabilité critique, interdit par la checklist code+tests). Aucun test/lint fourni à exécuter. ! agent \"reviewer\" is a subagent, not a primary agent. Falling back"
+        },
+        {
+          "id": "bad-code-secret",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 2,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Le livrable Phase 03 ne contient qu'un seul fichier `config.py` : aucun test ni config de lint à exécuter (code+tests absent), et une clé secrète Stripe live est codée en dur dans le code. ! agent \"reviewer\" is a subagen"
+        },
+        {
+          "id": "bad-code-secret",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 3,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Secret Stripe clé en dur dans config.py:1 (`sk_live_fake-1234-fake-secret-key`) ; aucun test ni lint fournis à exécuter, donc checklist code+tests non satisfaite. ! agent \"reviewer\" is a subagent, not a primary agent. Fa"
+        },
+        {
+          "id": "bad-code-sql-injection",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 1,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Tests executed (`python3 test_app.py`) crash: `sqlite3.OperationalError: no such table: users`. Code also concatenates `username` directly into SQL — SQL injection with no parameterization or input validation (app.py:4-5"
+        },
+        {
+          "id": "bad-code-sql-injection",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 2,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Tests échouent (`sqlite3.OperationalError: no such table: users` sur `find_user`). De plus, `build_query` concatène l'input utilisateur dans la requête SQL sans validation : vulnérabilité d'injection SQL évidente (ex. `'"
+        },
+        {
+          "id": "bad-code-sql-injection",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 3,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Tests échouent (`sqlite3.OperationalError: no such table: users`), et le code présente une injection SQL évidente (concaténation de l'input utilisateur dans la requête, app.py:5) sans validation. ! agent \"reviewer\" is a "
+        },
+        {
+          "id": "bad-elaboration-missing-traceability",
+          "phase": "02",
+          "truth": "FAIL",
+          "run": 1,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Matrice de traçabilité incomplète : FR-2 et FR-3 n'ont aucun scénario Gherkin (« — »), alors que chaque FR exige ≥1 scénario ; FR-3 n'a aucun bloc `Fonctionnalité`. De plus, la fonctionnalité « Envoyer une facture » ne c"
+        },
+        {
+          "id": "bad-elaboration-missing-traceability",
+          "phase": "02",
+          "truth": "FAIL",
+          "run": 2,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "La matrice de traçabilité est incomplète : FR-2 et FR-3 n'ont aucun scénario Gherkin (colonne « — »), alors que la checklist exige ≥1 scénario par FR et ≥1 bloc `Fonctionnalité` (happy path + erreur) par FR — seules 2 fo"
+        },
+        {
+          "id": "bad-elaboration-missing-traceability",
+          "phase": "02",
+          "truth": "FAIL",
+          "run": 3,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Matrice de traçabilité incomplète : FR-2 et FR-3 n'ont aucun scénario Gherkin (cellule « — ») ; un seul bloc Fonctionnalité pour 2 des 3 FR et pas de scénario d'erreur/limite pour tous les FR. ! agent \"reviewer\" is a sub"
+        },
+        {
+          "id": "bad-gherkin",
+          "phase": "02",
+          "truth": "FAIL",
+          "run": 1,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Le livrable ne contient qu'un fichier `gherkin.feature` partiel (scénario sans `Alors`, aucun cas d'erreur) ; les 4 livrables obligatoires de l'élaboration (`business-use-cases.md`, `entity-model.md`, `system-use-cases.m"
+        },
+        {
+          "id": "bad-gherkin",
+          "phase": "02",
+          "truth": "FAIL",
+          "run": 2,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Seul `gherkin.feature` existe : les quatre livrables requis (`docs/02-elaboration/` : business-use-cases.md, entity-model.md, system-use-cases.md, test-cases.md) sont absents. Le scénario Gherkin est incomplet (aucune ét"
+        },
+        {
+          "id": "bad-gherkin",
+          "phase": "02",
+          "truth": "FAIL",
+          "run": 3,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Livrable incomplet : 3 fichiers de la phase 02 absents (`business-use-cases.md`, `entity-model.md`, `system-use-cases.md`) ; le Gherkin est tronqué (pas de clause `Alors`, pas de scénario d'erreur) et la matrice de traça"
+        },
+        {
+          "id": "bad-transition-missing-uat-mapping",
+          "phase": "04",
+          "truth": "FAIL",
+          "run": 1,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "- Aucun scénario UAT n'est mappé à un FR ni à un critère de succès du BRC (liste sans références). - Backlog d'amélioration sans priorités P0/P1/P2 et sans traçabilité vers des sources de feedback. - Absence du loop log "
+        },
+        {
+          "id": "bad-transition-missing-uat-mapping",
+          "phase": "04",
+          "truth": "FAIL",
+          "run": 2,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Scénarios UAT non tracés vers les FR/critères de succès (checklist explicit), et backlog d'amélioration sans priorités P0/P1/P2 ni traçabilité aux retours. ! agent \"reviewer\" is a subagent, not a primary agent. Falling b"
+        },
+        {
+          "id": "bad-transition-missing-uat-mapping",
+          "phase": "04",
+          "truth": "FAIL",
+          "run": 3,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "UAT scénarios non tracés vers FR/critères de succès ; backlog d'amélioration non priorisé (P0/P1/P2) et non traçable ; `docs/status.md` absent (précondition phase 04 non vérifiable). ! agent \"reviewer\" is a subagent, not"
+        },
+        {
+          "id": "bad-transition-secret-in-checklist",
+          "phase": "04",
+          "truth": "FAIL",
+          "run": 1,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Secrets réels exposés dans deployment-checklist.md (`DB_PASSWORD`, `SECRET_KEY`) au lieu de placeholders; monitoring absent de la checklist; `docs/status.md` (preuve des phases antérieures) absent. ! agent \"reviewer\" is "
+        },
+        {
+          "id": "bad-transition-secret-in-checklist",
+          "phase": "04",
+          "truth": "FAIL",
+          "run": 2,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Deployment checklist embeds real secret values (`DB_PASSWORD`, `SECRET_KEY`) instead of name-only placeholders, and lacks any monitoring item. No `docs/status.md` loop log proves prior phases passed. ! agent \"reviewer\" i"
+        },
+        {
+          "id": "bad-transition-secret-in-checklist",
+          "phase": "04",
+          "truth": "FAIL",
+          "run": 3,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "- Secrets en clair dans `deployment-checklist.md` (valeurs `DB_PASSWORD`, `SECRET_KEY` au lieu de placeholders). - Checklist de déploiement sans item monitoring ; `docs/status.md` (trace des phases précédentes) absent. !"
+        },
+        {
+          "id": "good-brc",
+          "phase": "01",
+          "truth": "PASS",
+          "run": 1,
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Objectifs mesurables, acteurs décrits, FR-01 à FR-05 numérotées/atomiques/vérifiables, chaque objectif couvert (O1→FR-01/02/05, O2→FR-03, O3→FR-04), contraintes et critères de succès vérifiables présents, traçabilité ass"
+        },
+        {
+          "id": "good-brc",
+          "phase": "01",
+          "truth": "PASS",
+          "run": 2,
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Objectifs mesurables (dont O3 quantifié), acteurs décrits, 5 FR numérotées/atomiques, traçabilité objectifs↔FR complète, contraintes et critères de succès vérifiables présents. Aucune exigence hors checklist réclamée ; p"
+        },
+        {
+          "id": "good-brc",
+          "phase": "01",
+          "truth": "PASS",
+          "run": 3,
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "BRC complet conforme à la checklist Phase 01 : objectifs mesurables, acteurs décrits, FR-01 à FR-05 numérotées/atomiques/vérifiables, traçabilité objectifs↔FR assurée, contraintes et critères de succès présents. Pas de p"
+        },
+        {
+          "id": "good-code",
+          "phase": "03",
+          "truth": "PASS",
+          "run": 1,
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Tests exécutés (`python3 test_sum_evens.py` → OK), code simple et conforme, nommage correct, pas de secrets ni de valeurs codées en dur ni de vulnérabilité exploitable. ! agent \"reviewer\" is a subagent, not a primary age"
+        },
+        {
+          "id": "good-code",
+          "phase": "03",
+          "truth": "PASS",
+          "run": 2,
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Tests executés (OK), code pur sans secrets ni valeurs codées en dur, nommage Python conforme, aucune vulnérabilité (pas d'input non validé, pas d'autorisation requise). ! agent \"reviewer\" is a subagent, not a primary age"
+        },
+        {
+          "id": "good-code",
+          "phase": "03",
+          "truth": "PASS",
+          "run": 3,
+          "predicted": "PARSE_FAIL",
+          "correct": null,
+          "reason": "TIMEOUT (> 180s)"
+        },
+        {
+          "id": "good-elaboration",
+          "phase": "02",
+          "truth": "PASS",
+          "run": 1,
+          "predicted": "PARSE_FAIL",
+          "correct": null,
+          "reason": "TIMEOUT (> 180s)"
+        },
+        {
+          "id": "good-elaboration",
+          "phase": "02",
+          "truth": "PASS",
+          "run": 2,
+          "predicted": "PARSE_FAIL",
+          "correct": null,
+          "reason": "TIMEOUT (> 180s)"
+        },
+        {
+          "id": "good-elaboration",
+          "phase": "02",
+          "truth": "PASS",
+          "run": 3,
+          "predicted": "PARSE_FAIL",
+          "correct": null,
+          "reason": "TIMEOUT (> 180s)"
+        },
+        {
+          "id": "good-transition",
+          "phase": "04",
+          "truth": "PASS",
+          "run": 1,
+          "predicted": "PARSE_FAIL",
+          "correct": null,
+          "reason": "TIMEOUT (> 180s)"
+        },
+        {
+          "id": "good-transition",
+          "phase": "04",
+          "truth": "PASS",
+          "run": 2,
+          "predicted": "PARSE_FAIL",
+          "correct": null,
+          "reason": "TIMEOUT (> 180s)"
+        },
+        {
+          "id": "good-transition",
+          "phase": "04",
+          "truth": "PASS",
+          "run": 3,
+          "predicted": "PARSE_FAIL",
+          "correct": null,
+          "reason": "TIMEOUT (> 180s)"
+        }
+      ]
+    },
+    {
+      "ts": "2026-08-03 04:50",
+      "metrics": {
+        "accuracy": 1.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "fn_rate": 0.0,
+        "fp_rate": 0.0,
+        "n": 3,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "runs": 3,
+        "stable_cases": 1,
+        "instable_cases": []
+      },
+      "cases": [
+        {
+          "id": "good-code",
+          "phase": "03",
+          "truth": "PASS",
+          "run": 1,
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Tests exécutés (python3 test_sum_evens.py → OK), code conforme, nommage PEP8, aucun secret ni vulnérabilité (fonction pure sans I/O). ! agent \"reviewer\" is a subagent, not a primary agent. Falling back to default agent >"
+        },
+        {
+          "id": "good-code",
+          "phase": "03",
+          "truth": "PASS",
+          "run": 2,
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Commande de test exécutée réellement (`python3 test_sum_evens.py`) : \"OK\", exit 0. Code simple conforme (nommage snake_case), aucune valeur en dur, aucun secret, pas de vulnérabilité applicable (fonction pure sans entrée"
+        },
+        {
+          "id": "good-code",
+          "phase": "03",
+          "truth": "PASS",
+          "run": 3,
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Tests exécutés réellement (`python3 test_sum_evens.py` → OK). Code conforme : nommage snake_case, pas de secrets ni valeurs codées en dur, fonction pure sans vulnérabilité d'accès/input. ! agent \"reviewer\" is a subagent,"
+        }
+      ]
+    },
+    {
+      "ts": "2026-08-03 04:51",
+      "metrics": {
+        "accuracy": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "fn_rate": 0.0,
+        "fp_rate": 1.0,
+        "n": 3,
+        "tp": 0,
+        "fp": 3,
+        "fn": 0,
+        "tn": 0,
+        "runs": 3,
+        "stable_cases": 1,
+        "instable_cases": []
+      },
+      "cases": [
+        {
+          "id": "good-elaboration",
+          "phase": "02",
+          "truth": "PASS",
+          "run": 1,
+          "predicted": "FAIL",
+          "correct": false,
+          "reason": "Répertoire de livrable vide — aucun des 4 fichiers requis (`business-use-cases.md`, `entity-model.md`, `system-use-cases.md`, `test-cases.md`) présent sous `docs/02-elaboration/`. Checklist Phase 02 non satisfaite. ! age"
+        },
+        {
+          "id": "good-elaboration",
+          "phase": "02",
+          "truth": "PASS",
+          "run": 2,
+          "predicted": "FAIL",
+          "correct": false,
+          "reason": "Le dossier `docs/02-elaboration/` est vide : aucun des quatre livrables requis (business-use-cases.md, entity-model.md, system-use-cases.md, test-cases.md) n'existe, et aucune matrice de traçabilité FR→UC/entité/scénario"
+        },
+        {
+          "id": "good-elaboration",
+          "phase": "02",
+          "truth": "PASS",
+          "run": 3,
+          "predicted": "FAIL",
+          "correct": false,
+          "reason": "Le dossier de livrable est vide : aucun livrable Phase 02 (diagrammes de cas d'usage, modèle entité-relation, cas d'usage système, tests Gherkin) n'a été fourni, rendant toute validation de checklist impossible. ! agent "
+        }
+      ]
+    },
+    {
+      "ts": "2026-08-03 04:52",
+      "metrics": {
+        "accuracy": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "fn_rate": 0.0,
+        "fp_rate": 1.0,
+        "n": 3,
+        "tp": 0,
+        "fp": 3,
+        "fn": 0,
+        "tn": 0,
+        "runs": 3,
+        "stable_cases": 1,
+        "instable_cases": []
+      },
+      "cases": [
+        {
+          "id": "good-transition",
+          "phase": "04",
+          "truth": "PASS",
+          "run": 1,
+          "predicted": "FAIL",
+          "correct": false,
+          "reason": "docs/status.md (loop log attestant le passage des phases précédentes) est absent — dernier item de la checklist non satisfait. Tout le reste est conforme (UAT tracé vers FR/CS, checklist déploiement complète, placeholder"
+        },
+        {
+          "id": "good-transition",
+          "phase": "04",
+          "truth": "PASS",
+          "run": 2,
+          "predicted": "FAIL",
+          "correct": false,
+          "reason": "All four Phase 04 deliverables satisfy checklist items 1-6 (UAT scoping/traceability, deployment checklist env/migrations/backups/rollback/monitoring, placeholders only — no secrets, structured feedback template, priorit"
+        },
+        {
+          "id": "good-transition",
+          "phase": "04",
+          "truth": "PASS",
+          "run": 3,
+          "predicted": "FAIL",
+          "correct": false,
+          "reason": "docs/status.md (loop log) absent — la checklist exige que toutes les phases précédentes soient passées (item « Loop log » non vérifiable). Les 4 livrables sont par ailleurs conformes (UAT tracé FR/CS, checklist env/migra"
+        }
+      ]
+    },
+    {
+      "ts": "2026-08-03 04:54",
+      "metrics": {
+        "accuracy": 1.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "fn_rate": 0.0,
+        "fp_rate": 0.0,
+        "n": 3,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "runs": 3,
+        "stable_cases": 1,
+        "instable_cases": []
+      },
+      "cases": [
+        {
+          "id": "good-elaboration",
+          "phase": "02",
+          "truth": "PASS",
+          "run": 1,
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Les 4 fichiers d'élaboration sont présents, tous les acteurs du BRC sont couverts, l'erDiagram existe, et chaque FR (FR-1 à FR-3) a un chemin nominal + un scénario d'erreur avec une matrice de traçabilité complète (pas d"
+        },
+        {
+          "id": "good-elaboration",
+          "phase": "02",
+          "truth": "PASS",
+          "run": 2,
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Les 4 fichiers requis sont présents, les diagrammes couvrent tous les acteurs du BRC, le modèle entité-relation est défini, les use cases système ont des notes de validation métier, chaque FR a un bloc Gherkin happy path"
+        },
+        {
+          "id": "good-elaboration",
+          "phase": "02",
+          "truth": "PASS",
+          "run": 3,
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Quatre fichiers présents dans `docs/02-elaboration/`, diagrammes Mermaid couvrant les acteurs du BRC, modèle entité-relation adéquat, use cases système avec règles métier, et scénarios Gherkin (happy path + erreur) pour "
+        }
+      ]
+    },
+    {
+      "ts": "2026-08-03 04:55",
+      "metrics": {
+        "accuracy": 1.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "fn_rate": 0.0,
+        "fp_rate": 0.0,
+        "n": 3,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "runs": 3,
+        "stable_cases": 1,
+        "instable_cases": []
+      },
+      "cases": [
+        {
+          "id": "good-transition",
+          "phase": "04",
+          "truth": "PASS",
+          "run": 1,
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "UAT plan couvre périmètre/acteurs/critères d'entrée-sortie et trace chaque scénario vers FR+critère de succès. Checklist déploiement couvre env/migrations/backup/rollback/monitoring, secrets référencés par nom sans valeu"
+        },
+        {
+          "id": "good-transition",
+          "phase": "04",
+          "truth": "PASS",
+          "run": 2,
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Checklist 04 validée : UAT (périmètre, acteurs, entrée/sortie, scénarios tracés FR/CS), déploiement (env, migrations, backup, rollback, monitoring), aucun secret (placeholders uniquement), template feedback structuré (wo"
+        },
+        {
+          "id": "good-transition",
+          "phase": "04",
+          "truth": "PASS",
+          "run": 3,
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Tous les critères de la checklist de transition sont couverts : UAT avec périmètre/acteurs/critères d'entrée-sortie, scénarios tracés vers FR/CS, checklist de déploiement (env par nom uniquement, migrations, backup, roll"
+        }
+      ]
+    },
+    {
+      "ts": "2026-08-03 05:10",
+      "metrics": {
+        "accuracy": 0.9523809523809523,
+        "precision": 0.9375,
+        "recall": 1.0,
+        "fn_rate": 0.0,
+        "fp_rate": 0.16666666666666666,
+        "n": 42,
+        "tp": 30,
+        "fp": 2,
+        "fn": 0,
+        "tn": 10,
+        "runs": 3,
+        "stable_cases": 13,
+        "instable_cases": [
+          "good-elaboration"
+        ]
+      },
+      "cases": [
+        {
+          "id": "bad-brc-missing-actors",
+          "phase": "01",
+          "truth": "FAIL",
+          "run": 1,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "- Section \"Acteurs\" absente (obligatoire dans la structure BRC) : le libraire est mentionné dans les objectifs mais aucun acteur n'est identifié avec rôle. - Titre/contexte incomplet (pas de contexte ni de date), objecti"
+        },
+        {
+          "id": "bad-brc-missing-actors",
+          "phase": "01",
+          "truth": "FAIL",
+          "run": 2,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Absence de la section \"Acteurs\" (aucun acteur identifié avec rôle), et objectifs O1/O2 non mesurables (aucun critère quantitatif ou seuil chiffré). Traceabilité incomplète : O1 (\"suivre les stocks en temps réel\") n'est c"
+        },
+        {
+          "id": "bad-brc-missing-actors",
+          "phase": "01",
+          "truth": "FAIL",
+          "run": 3,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Checklist non satisfaite : la section \"Acteurs\" (rôles décrits) est absente et la section \"Titre et contexte\" ne contient aucun contexte/date ; structure du BRC incomplète par rapport à la checklist. ! agent \"reviewer\" i"
+        },
+        {
+          "id": "bad-brc-non-atomic-fr",
+          "phase": "01",
+          "truth": "FAIL",
+          "run": 1,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "- FRs non atomiques (FR-1 regroupe création/modification/suppression/duplication/lignes/remises/e-mail/suivi via « et ») et non verifiables individuellement. - Acteurs sans description de rôle ; critères de succès non me"
+        },
+        {
+          "id": "bad-brc-non-atomic-fr",
+          "phase": "01",
+          "truth": "FAIL",
+          "run": 2,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "- FR non atomiques (FR-1 et FR-2 combinent création/modif/suppression/recherche/export) et acteurs sans description de rôle. - Critères de succès non vérifiables (« efficace », « rapides ») ; objectifs non quantifiés. ! "
+        },
+        {
+          "id": "bad-brc-non-atomic-fr",
+          "phase": "01",
+          "truth": "FAIL",
+          "run": 3,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "FRs non atomiques (FR-1 et FR-2 combinent plusieurs capacités via \"et\"), acteurs sans description de rôle, objectifs et critères de succès non mesurables/vérifiables (\"efficace\", \"rapides\") — violations des items 1, 2, 3"
+        },
+        {
+          "id": "bad-code-failing-test",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 1,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Les tests échouent (`add(1,2)` retourne 4 au lieu de 3) : l'implémentation `add` contient un `+1` erroné, la logique ne satisfait pas la spécification. ! agent \"reviewer\" is a subagent, not a primary agent. Falling back "
+        },
+        {
+          "id": "bad-code-failing-test",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 2,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Tests exécutés échouent : `add(1,2)` retourne 4 au lieu de 3 (bug `a + b + 1` dans add.py:3). Assertion 1 déclenchée, pas d'exécution OK. ! agent \"reviewer\" is a subagent, not a primary agent. Falling back to default age"
+        },
+        {
+          "id": "bad-code-failing-test",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 3,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Les tests échouent (AssertionError ligne 4 : add(1,2) retourne 4 au lieu de 3), la logique est incorrecte. ! agent \"reviewer\" is a subagent, not a primary agent. Falling back to default agent > build · big-pickle → Read "
+        },
+        {
+          "id": "bad-code-idor-missing-ownership",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 1,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Tests pass (`python3 test_app.py` → OK), no secrets, naming conforme. Mais `get_user_profile`/`render_profile_page` exposent un IDOR : aucun contrôle d'autorisation ne lie l'identité du demandeur au `user_id` consulté (n"
+        },
+        {
+          "id": "bad-code-idor-missing-ownership",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 2,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "`get_user_profile(user_id)` retourne le profil de n'importe quel utilisateur sans contrôle de propriété/autorisation (IDOR) — la revendication \"résolu en amont\" n'est étayée par aucun contrôle de l'actor, critère explici"
+        },
+        {
+          "id": "bad-code-idor-missing-ownership",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 3,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Tests pass (`python3 test_app.py` → OK) but `get_user_profile` is an unauthenticated IDOR: any caller can request any `user_id` and receive the admin profile without any authorization check binding the caller to the requ"
+        },
+        {
+          "id": "bad-code-secret",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 1,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Le livrable contient une clé secrète Stripe live codée en dur dans `config.py` (violation directe de la checklist code+tests). Aucun test/lint fourni n'est exécutable, et le nommage/design ne suit pas les conventions att"
+        },
+        {
+          "id": "bad-code-secret",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 2,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "- Secret Stripe live (`sk_live_...`) codé en dur et livré dans le dépôt — violation checklist sécurité (secrets/secrets commités). - Aucun code + tests fournis à exécuter : le livrable ne contient qu'un `config.py`, la p"
+        },
+        {
+          "id": "bad-code-secret",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 3,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "- Secret Stripe `sk_live_...` codé en dur dans `config.py:3`, aucun `.env.example` — violation de la checklist (no secrets in code). - Aucun test ni lint fourni (checklist : tests existent et passent, reviewer les exécut"
+        },
+        {
+          "id": "bad-code-sql-injection",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 1,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Test command `python3 test_app.py` fails: `sqlite3.OperationalError: no such table: users` (no schema setup, no real test framework). Code also contains an SQL injection vulnerability (raw string concatenation of `userna"
+        },
+        {
+          "id": "bad-code-sql-injection",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 2,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "- Tests fail: `python3 test_app.py` crashes with `sqlite3.OperationalError: no such table: users`. - SQL injection in app.py:5 (query built by string interpolation of user input, unparameterized). - No traceability/elabo"
+        },
+        {
+          "id": "bad-code-sql-injection",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 3,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Tests fail on execution (`sqlite3.OperationalError: no such table: users` in test_app.py:4); SQL query is built by string interpolation of user input (app.py:5), violating the no-injection checklist item. ! agent \"review"
+        },
+        {
+          "id": "bad-elaboration-missing-traceability",
+          "phase": "02",
+          "truth": "FAIL",
+          "run": 1,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "- BRC absent (precondition non vérifiée) et matrice de traçabilité incomplète : FR-2 et FR-3 n'ont pas de scénario Gherkin (colonnes « — »). - Deux blocs `Fonctionnalité` Gherkin seulement, alors que la matrice référence"
+        },
+        {
+          "id": "bad-elaboration-missing-traceability",
+          "phase": "02",
+          "truth": "FAIL",
+          "run": 2,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "- Matrice de traçabilité incomplète : FR-2 et FR-3 n'ont aucun scénario Gherkin (colonne « — »), la règle « 1 FR → ≥1 scénario » n'est pas respectée. - Pas d'un bloc `Fonctionnalité` par FR (seulement 2 blocs pour 3 FR) "
+        },
+        {
+          "id": "bad-elaboration-missing-traceability",
+          "phase": "02",
+          "truth": "FAIL",
+          "run": 3,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Matrice de traçabilité incomplète : FR-2 et FR-3 ont « — » en scénario Gherkin (FR-3 sans aucun scénario), or chaque FR doit mapper ≥1 use case + ≥1 entité + ≥1 scénario. De plus, pas un bloc `Fonctionnalité` par FR (2 b"
+        },
+        {
+          "id": "bad-gherkin",
+          "phase": "02",
+          "truth": "FAIL",
+          "run": 1,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Seul `gherkin.feature` existe, hors `docs/02-elaboration/` : manquent `business-use-cases.md`, `entity-model.md`, `system-use-cases.md`, `test-cases.md` et la matrice de traçabilité FR→UC→entité→scénario. Le scénario uni"
+        },
+        {
+          "id": "bad-gherkin",
+          "phase": "02",
+          "truth": "FAIL",
+          "run": 2,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Dossier `docs/02-elaboration/` absent ; aucun des 4 livrables requis (business-use-cases.md, entity-model.md, system-use-cases.md, test-cases.md) n'existe. Seul un fichier `gherkin.feature` tronqué (scénario sans `Alors`"
+        },
+        {
+          "id": "bad-gherkin",
+          "phase": "02",
+          "truth": "FAIL",
+          "run": 3,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Livrable très incomplet pour la Phase 02 : seuls des cas de test Gherkin sont fournis ; manquent les diagrammes de cas d'utilisation métier/système et le modèle Entité-Relation exigés par la checklist. Le fichier `gherki"
+        },
+        {
+          "id": "bad-transition-missing-uat-mapping",
+          "phase": "04",
+          "truth": "FAIL",
+          "run": 1,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Scénarios UAT non tracés vers des FR ni critères de succès de la BRC, et backlog d'améliorations sans priorités P0/P1/P2 ni traçabilité vers des sources de feedback (docs/status.md absent). ! agent \"reviewer\" is a subage"
+        },
+        {
+          "id": "bad-transition-missing-uat-mapping",
+          "phase": "04",
+          "truth": "FAIL",
+          "run": 2,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "- UAT scenarios (uat-plan.md:17-20) ne sont mappés à aucun FR ni critère de succès du BRC. - improvement-backlog.md:5-14 : améliorations sans priorité P0/P1/P2 ni traçabilité à une source de feedback. - Absence de `docs/"
+        },
+        {
+          "id": "bad-transition-missing-uat-mapping",
+          "phase": "04",
+          "truth": "FAIL",
+          "run": 3,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "- Aucun scénario UAT ne référence de FR ni de critère de succès du BRC (exigence centrale de la checklist). - Backlog sans priorités P0/P1/P2 et sans traçabilité vers une source de feedback. - `docs/status.md` absent : l"
+        },
+        {
+          "id": "bad-transition-secret-in-checklist",
+          "phase": "04",
+          "truth": "FAIL",
+          "run": 1,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "- Secrets en clair dans `deployment-checklist.md` (DB_PASSWORD, SECRET_KEY) alors que la checklist exige des placeholders par nom uniquement. - Checklist de déploiement incomplète : la rubrique monitoring est absente. ! "
+        },
+        {
+          "id": "bad-transition-secret-in-checklist",
+          "phase": "04",
+          "truth": "FAIL",
+          "run": 2,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Secrets en clair dans `deployment-checklist.md` (`DB_PASSWORD`, `SECRET_KEY` avec valeurs réelles au lieu de placeholders) ; checklist sans couverture « monitoring » ; pas de loop log (`docs/status.md`) attestant les pha"
+        },
+        {
+          "id": "bad-transition-secret-in-checklist",
+          "phase": "04",
+          "truth": "FAIL",
+          "run": 3,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "- Secrets en clair dans deployment-checklist.md (`DB_PASSWORD`, `SECRET_KEY` = valeurs réelles au lieu de placeholders). - Checklist de déploiement sans section monitoring (env/migrations/backup/rollback présents, monito"
+        },
+        {
+          "id": "good-brc",
+          "phase": "01",
+          "truth": "PASS",
+          "run": 1,
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Checklist Phase 01 conforme : objectifs mesurables, acteurs décrits, FR numérotées/atomiques/vérifiables, chaque objectif couvert (section traçabilité), contraintes et critères de succès vérifiables présents, aucun secre"
+        },
+        {
+          "id": "good-brc",
+          "phase": "01",
+          "truth": "PASS",
+          "run": 2,
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Tous les critères de la checklist Phase 01 sont satisfaits : objectifs mesurables (O1-O3, dont O3 chiffré), acteurs avec rôles, FR-01 à FR-05 numérotées/atomiques/vérifiables, sections contraintes et critères de succès v"
+        },
+        {
+          "id": "good-brc",
+          "phase": "01",
+          "truth": "PASS",
+          "run": 3,
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Toutes les sections requises (titre/contexte, objectifs, acteurs, FR, contraintes, critères de succès) sont présentes ; FR-01..FR-05 numérotées, atomiques et vérifiables, chaque objectif couvert par au moins une FR, traç"
+        },
+        {
+          "id": "good-code",
+          "phase": "03",
+          "truth": "PASS",
+          "run": 1,
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Tests réellement exécutés (exit 0, 4 assertions passées), aucune valeur codée en dur ni secret, nommage PEP8 conforme, fonction pure sans vulnérabilité (pas d'entrée externe, pas d'auth requise). ! agent \"reviewer\" is a "
+        },
+        {
+          "id": "good-code",
+          "phase": "03",
+          "truth": "PASS",
+          "run": 2,
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Tests exécutés (python3 test_sum_evens.py → OK, exit 0), code conforme au nommage, docstring présent, aucun secret/valeur codée en dur, pas de vulnérabilité (fonction pure, pas d'I/O, pas de surface d'auth). ! agent \"rev"
+        },
+        {
+          "id": "good-code",
+          "phase": "03",
+          "truth": "PASS",
+          "run": 3,
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Tests exécutés avec succès (python3 test_sum_evens.py → OK). Code simple et correct, nommage snake_case conforme, aucune valeur codée en dur ni secret, aucun vecteur de vulnérabilité (fonction pure, pas d'I/O). ! agent \""
+        },
+        {
+          "id": "good-elaboration",
+          "phase": "02",
+          "truth": "PASS",
+          "run": 1,
+          "predicted": "FAIL",
+          "correct": false,
+          "reason": "FR-3 est couvert par deux blocs `Fonctionnalité: Créer une salle` identiques dupliqués dans test-cases.md:19 et :44, violant la règle « un bloc Fonctionnalité par FR » de la checklist. Le reste (4 fichiers, acteurs couve"
+        },
+        {
+          "id": "good-elaboration",
+          "phase": "02",
+          "truth": "PASS",
+          "run": 2,
+          "predicted": "FAIL",
+          "correct": false,
+          "reason": "- Le bloc « Fonctionnalité: Créer une salle » (FR-3) est dupliqué (lignes 19-27 et 44-57), ce qui viole la règle « un bloc Fonctionnalité par FR » de la checklist, et le premier bloc est dépourvu du scénario d'erreur. - "
+        },
+        {
+          "id": "good-elaboration",
+          "phase": "02",
+          "truth": "PASS",
+          "run": 3,
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Les 4 fichiers sont présents, tous les acteurs du BRC (Client, Administrateur) sont couverts, l'`erDiagram` couvre les 3 entités, et chaque FR a un block Gherkin avec scénario nominal + erreur. La matrice de traçabilité "
+        },
+        {
+          "id": "good-transition",
+          "phase": "04",
+          "truth": "PASS",
+          "run": 1,
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "UAT plan a périmètre, acteurs, critères entrée/sortie et chaque scénario trace FR+CS ; checklist déploiement couvre env/migrations/backup/rollback/monitoring sans valeurs secrètes (placeholders uniquement) ; template fee"
+        },
+        {
+          "id": "good-transition",
+          "phase": "04",
+          "truth": "PASS",
+          "run": 2,
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Checklist transition conforme : UAT (périmètre/acteurs/critères d'entrée-sortie, scénarios tracés FR+CS), checklist déploiement (env par nom, migrations, backup, rollback, monitoring), template feedback structuré (foncti"
+        },
+        {
+          "id": "good-transition",
+          "phase": "04",
+          "truth": "PASS",
+          "run": 3,
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "UAT plan has scope, actors, entry/exit criteria and every scenario maps to FR + success criterion; deployment checklist covers env (placeholders only, no values), migrations, backups, rollback, monitoring; feedback templ"
+        }
+      ]
+    },
+    {
+      "ts": "2026-08-03 05:12",
+      "metrics": {
+        "accuracy": 1.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "fn_rate": 0.0,
+        "fp_rate": 0.0,
+        "n": 3,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "runs": 3,
+        "stable_cases": 1,
+        "instable_cases": []
+      },
+      "cases": [
+        {
+          "id": "good-elaboration",
+          "phase": "02",
+          "truth": "PASS",
+          "run": 1,
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Les 4 livrables exigés existent ; les 2 acteurs du BRC (Client, Administrateur) sont couverts, `erDiagram` présent, 4 system use cases avec notes de validation métier, un bloc Gherkin par FR (happy path + erreur) et matr"
+        },
+        {
+          "id": "good-elaboration",
+          "phase": "02",
+          "truth": "PASS",
+          "run": 2,
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Les 4 fichiers de `docs/02-elaboration/` existent, le diagramme métier couvre les 2 acteurs du BRC, l'`erDiagram` couvre les entités des cas d'usage, les SUC ont des notes de validation métier, et chaque FR a un bloc Ghe"
+        },
+        {
+          "id": "good-elaboration",
+          "phase": "02",
+          "truth": "PASS",
+          "run": 3,
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Les 4 livrables sont présents, tous les acteurs du BRC couverts, erDiagram présent, validation métier documentée, et la matrice de traçabilité couvre les 3 FR avec ≥1 cas métier, entité et scénario (happy path + erreur) "
+        }
+      ]
+    },
+    {
+      "ts": "2026-08-03 05:28",
+      "metrics": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "fn_rate": 0.0,
+        "fp_rate": 0.0,
+        "n": 42,
+        "tp": 30,
+        "fp": 0,
+        "fn": 0,
+        "tn": 12,
+        "runs": 3,
+        "stable_cases": 14,
+        "instable_cases": []
+      },
+      "cases": [
+        {
+          "id": "bad-brc-missing-actors",
+          "phase": "01",
+          "truth": "FAIL",
+          "run": 1,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Section Acteurs absente (aucun acteur identifié, alors que la checklist l'exige) ; section \"Titre et contexte\" (contexte + date) également absente. Objectifs présents mais non mesurables de façon quantifiable. ! agent \"r"
+        },
+        {
+          "id": "bad-brc-missing-actors",
+          "phase": "01",
+          "truth": "FAIL",
+          "run": 2,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "- Section Acteurs absente (obligatoire) : aucun acteur identifié avec rôle. - Titre et contexte incomplet : pas de contexte ni de date. - Objectifs non mesurables (ex. \"temps réel\" sans seuil/quantification). ! agent \"re"
+        },
+        {
+          "id": "bad-brc-missing-actors",
+          "phase": "01",
+          "truth": "FAIL",
+          "run": 3,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Sections \"Acteurs\" (aucun acteur identifié) et \"Titre et contexte\" (contexte/date absents) manquent à la structure obligatoire; l'objectif O1 n'est pas mesurable. ! agent \"reviewer\" is a subagent, not a primary agent. Fa"
+        },
+        {
+          "id": "bad-brc-non-atomic-fr",
+          "phase": "01",
+          "truth": "FAIL",
+          "run": 1,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Acteurs sans description de rôle ; critères de succès non vérifiables (« efficace », « rapides ») ; FR-1 non atomique (combine création, modification, suppression, lignes, remises, e-mail, suivi). ! agent \"reviewer\" is a"
+        },
+        {
+          "id": "bad-brc-non-atomic-fr",
+          "phase": "01",
+          "truth": "FAIL",
+          "run": 2,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "FR-1 combine plusieurs capacités par « et » (non-atomique), les acteurs n'ont pas de descriptions de rôle, les objectifs et critères de succès (« efficace », « rapides ») ne sont pas mesurables/vérifiables, et il manque "
+        },
+        {
+          "id": "bad-brc-non-atomic-fr",
+          "phase": "01",
+          "truth": "FAIL",
+          "run": 3,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "- FR non atomiques (FR-1 combine création/modification/suppression/duplication/lignes/remises/e-mail; FR-2 combine recherche, tri, export) et non vérifiables. - Acteurs sans description de rôle; critères de succès non vé"
+        },
+        {
+          "id": "bad-code-failing-test",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 1,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Les tests échouent (`assert add(1, 2) == 3` — AssertionError) : `add.py` retourne `a + b + 1` au lieu de `a + b`. ! agent \"reviewer\" is a subagent, not a primary agent. Falling back to default agent > build · big-pickle "
+        },
+        {
+          "id": "bad-code-failing-test",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 2,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Tests exécutés (python3 test_add.py) échouent en AssertionError : `add.py:3` renvoie `a + b + 1` au lieu de `a + b`, l'implémentation ne correspond pas à son contrat (\"Adds two numbers\") et les deux assertions échouent. "
+        },
+        {
+          "id": "bad-code-failing-test",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 3,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Tests échouent (`assert add(1, 2) == 3` : code renvoie 4 à cause du `+ 1` dans `add.py`). ! agent \"reviewer\" is a subagent, not a primary agent. Falling back to default agent > build · big-pickle → Skill \"phase-construct"
+        },
+        {
+          "id": "bad-code-idor-missing-ownership",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 1,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Tests pass (python3 test_app.py → OK) but `get_user_profile` in app.py:4 is an IDOR : aucun contrôle d'autorisation, n'importe quel user_id est servi (email/role) sans vérifier le propriétaire de la session — la docstrin"
+        },
+        {
+          "id": "bad-code-idor-missing-ownership",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 2,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "IDOR : `get_user_profile(user_id)` renvoie le profil de n'importe quel utilisateur (dont le rôle admin) sans aucun contrôle d'ownership/autorisation — la checklist exige que l'accès à une ressource vérifie la possession,"
+        },
+        {
+          "id": "bad-code-idor-missing-ownership",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 3,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Tests pass (`OK`) et nommage conforme, mais `get_user_profile` souffre d'un IDOR : aucun contrôle d'autorisation, tout `user_id` donne accès à n'importe quel profil (contraire à la checklist code+tests phase 03). ! agent"
+        },
+        {
+          "id": "bad-code-secret",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 1,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Clé secrète Stripe codée en dur dans config.py:1-3 (violation critiques secrets), aucune lecture via variable d'environnement, et aucun test/lint fourni pour une phase 03 (code+tests) — rien à exécuter. ! agent \"reviewer"
+        },
+        {
+          "id": "bad-code-secret",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 2,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Livrable Phase 03 incomplet : un seul fichier `config.py`, aucun code applicatif ni tests, aucune commande de test/lint exécutable. Surtout, secret Stripe live en dur (`sk_live_...`) dans le code — violation directe de l"
+        },
+        {
+          "id": "bad-code-secret",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 3,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Secret Stripe live codé en dur dans `config.py:3` (aucune source d'env/vault) ; livrable de phase 03 sans aucun test/lint exécutable — la revue code+tests ne peut pas passer sans tests fournis. ! agent \"reviewer\" is a su"
+        },
+        {
+          "id": "bad-code-sql-injection",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 1,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Tests fail (`sqlite3.OperationalError: no such table: users`), and `app.py:5` builds SQL via string concatenation — SQL injection, unvalidated input. ! agent \"reviewer\" is a subagent, not a primary agent. Falling back to"
+        },
+        {
+          "id": "bad-code-sql-injection",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 2,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Tests échouent (`no such table: users`), et le code présente une injection SQL par concaténation directe de l'input utilisateur (app.py:5). ! agent \"reviewer\" is a subagent, not a primary agent. Falling back to default a"
+        },
+        {
+          "id": "bad-code-sql-injection",
+          "phase": "03",
+          "truth": "FAIL",
+          "run": 3,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Tests executed and crash (`sqlite3.OperationalError: no such table: users`), and `app.py:5` builds SQL by string interpolation of user input (SQL injection), violating the checklist. ! agent \"reviewer\" is a subagent, not"
+        },
+        {
+          "id": "bad-elaboration-missing-traceability",
+          "phase": "02",
+          "truth": "FAIL",
+          "run": 1,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "- 2 des 3 FR référencées dans la matrice (FR-2, FR-3) n'ont aucun scénario Gherkin (\"—\"), violant la règle de traçabilité \"≥1 scénario par FR\". - Un seul bloc `Fonctionnalité` par FR exigé : seuls 2 blocs pour 3 FR, et \""
+        },
+        {
+          "id": "bad-elaboration-missing-traceability",
+          "phase": "02",
+          "truth": "FAIL",
+          "run": 2,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Traceability matrix incomplete : FR-2 et FR-3 n'ont aucun scénario Gherkin (\"—\") et aucun bloc `Fonctionnalité` ne leur correspond (3 FR pour 2 blocs), ce qui viole la règle un bloc par FR. De plus \"Envoyer une facture p"
+        },
+        {
+          "id": "bad-elaboration-missing-traceability",
+          "phase": "02",
+          "truth": "FAIL",
+          "run": 3,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "- Matrice de traçabilité incomplète : FR-2 et FR-3 n'ont aucun scénario Gherkin (\"—\"), alors que chaque FR doit mapper ≥1 scénario. - Gherkin non conforme : pas un bloc `Fonctionnalité` par FR (aucun bloc pour FR-3/paiem"
+        },
+        {
+          "id": "bad-gherkin",
+          "phase": "02",
+          "truth": "FAIL",
+          "run": 1,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Le livrable ne contient qu'un seul fichier `gherkin.feature`, incomplet et hors de `docs/02-elaboration/`. Manquent les 4 livrables exigés (`business-use-cases.md`, `entity-model.md`, `system-use-cases.md`, `test-cases.m"
+        },
+        {
+          "id": "bad-gherkin",
+          "phase": "02",
+          "truth": "FAIL",
+          "run": 2,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Le dossier ne contient qu'un seul fichier `gherkin.feature` (incomplet : pas de pas `Alors`), aucun des quatre livrables requis de la phase 02 (`business-use-cases.md`, `entity-model.md`, `system-use-cases.md`, `test-cas"
+        },
+        {
+          "id": "bad-gherkin",
+          "phase": "02",
+          "truth": "FAIL",
+          "run": 3,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Absence totale des 4 livrables `docs/02-elaboration/` (business-use-cases, entity-model, system-use-cases, test-cases) — seul un `gherkin.feature` incomplet existe, sans matrice de traçabilité. Le scénario Gherkin est tr"
+        },
+        {
+          "id": "bad-transition-missing-uat-mapping",
+          "phase": "04",
+          "truth": "FAIL",
+          "run": 1,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "The UAT scenarios don't map to any FR/success criterion from the BRC, the improvement backlog lacks P0/P1/P2 priorities and clear traceability, and `docs/status.md` (loop log) is absent. ! agent \"reviewer\" is a subagent,"
+        },
+        {
+          "id": "bad-transition-missing-uat-mapping",
+          "phase": "04",
+          "truth": "FAIL",
+          "run": 2,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "Scénarios UAT sans mapping FR/critère de succès du BRC ; backlog sans priorités P0/P1/P2 ni traçabilité à des feedbacks ; aucun `docs/status.md` prouvant les phases antérieures passées. ! agent \"reviewer\" is a subagent, "
+        },
+        {
+          "id": "bad-transition-missing-uat-mapping",
+          "phase": "04",
+          "truth": "FAIL",
+          "run": 3,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "UAT scenarios (uat-plan.md) ne référencent aucun FR ni critère de succès du BRC; le backlog (improvement-backlog.md) n'est ni priorisé (P0/P1/P2) ni traçable à une source de feedback; aucun `docs/status.md` ne démontre l"
+        },
+        {
+          "id": "bad-transition-secret-in-checklist",
+          "phase": "04",
+          "truth": "FAIL",
+          "run": 1,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "- Secrets en clair dans `deployment-checklist.md` (DB_PASSWORD, SECRET_KEY avec valeurs réelles) au lieu de placeholders. - Monitoring absent de la checklist de déploiement ; `docs/status.md` (preuves phases antérieures)"
+        },
+        {
+          "id": "bad-transition-secret-in-checklist",
+          "phase": "04",
+          "truth": "FAIL",
+          "run": 2,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "- Secrets codés en dur dans deployment-checklist.md (DB_PASSWORD, SECRET_KEY réels) alors que la checklist n'autorise que des noms de variables. - Monitoring absent de la checklist de déploiement, et docs/status.md intro"
+        },
+        {
+          "id": "bad-transition-secret-in-checklist",
+          "phase": "04",
+          "truth": "FAIL",
+          "run": 3,
+          "predicted": "FAIL",
+          "correct": true,
+          "reason": "- Secrets codés en dur dans `deployment-checklist.md` (valeurs `DB_PASSWORD` et `SECRET_KEY`), alors que la règle impose des noms de variables uniquement. - Checklist de déploiement sans section « monitoring » (exigée pa"
+        },
+        {
+          "id": "good-brc",
+          "phase": "01",
+          "truth": "PASS",
+          "run": 1,
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "La checklist Phase 01 est satisfaite : objectifs mesurables (O3 chiffré), acteurs identifiés, FR-01→FR-05 numérotées/atomiques, traçabilité objectifs↔FR complète, contraintes et critères de succès vérifiables présents. A"
+        },
+        {
+          "id": "good-brc",
+          "phase": "01",
+          "truth": "PASS",
+          "run": 2,
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Tous les items de la checklist BRC sont satisfaits : objectifs présents et mesurables (O3 chiffré), acteurs avec rôles, FR-01 à FR-05 numérotées, atomiques et traçables vers chaque objectif, sections contraintes et critè"
+        },
+        {
+          "id": "good-brc",
+          "phase": "01",
+          "truth": "PASS",
+          "run": 3,
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Objectifs mesurables (O3 : 30 % en 6 mois), acteurs décrits, FR-01→05 numérotées/atomiques avec traçabilité vers objectifs, contraintes et critères de succès vérifiables présents. Aucun secret ni portée inventée ; pas de"
+        },
+        {
+          "id": "good-code",
+          "phase": "03",
+          "truth": "PASS",
+          "run": 1,
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Tests pass (`OK`, exit 0). Code matches spec, test coverage adequate, naming/docstring conforms, no secrets, hardcoded values or injection/auth risks for this pure function. ! agent \"reviewer\" is a subagent, not a primar"
+        },
+        {
+          "id": "good-code",
+          "phase": "03",
+          "truth": "PASS",
+          "run": 2,
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Tests executed (`python3 test_sum_evens.py` → OK, exit 0). Code conforms to Phase 03 checklist: function implements the use case, docstring present, naming PEP8, no secrets/hardcoded values, no security issues (pure func"
+        },
+        {
+          "id": "good-code",
+          "phase": "03",
+          "truth": "PASS",
+          "run": 3,
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Tests exécutés (`python3 test_sum_evens.py` → OK, exit 0) et couvrent les cas nominal, vide et sans pairs. Naming conforme, docstring présente, aucun secret ni code vulnérable (fonction pure sans entrée non validée ni su"
+        },
+        {
+          "id": "good-elaboration",
+          "phase": "02",
+          "truth": "PASS",
+          "run": 1,
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Les 4 livrables attendus existent sous `docs/02-elaboration/`; les diagrammes Mermaid couvrent les acteurs du BRC (Client, Administrateur), l'`erDiagram` couvre les entités des use cases, chaque FR a un bloc `Fonctionnal"
+        },
+        {
+          "id": "good-elaboration",
+          "phase": "02",
+          "truth": "PASS",
+          "run": 2,
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Quatre livrables présents (business/system UC, erDiagram, Gherkin). Chaque FR-1/2/3 a un Fonctionnalité Gherkin avec chemin nominal + scénario d'erreur, et la matrice de traçabilité est complète (use case + entité + scén"
+        },
+        {
+          "id": "good-elaboration",
+          "phase": "02",
+          "truth": "PASS",
+          "run": 3,
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Les 4 livrables de la phase 02 existent, les 3 FR du BRC sont couvertes (use cases business/système, modèle ER, un bloc Gherkin par FR avec happy path + scénario d'erreur) et la matrice de traçabilité ne présente aucun F"
+        },
+        {
+          "id": "good-transition",
+          "phase": "04",
+          "truth": "PASS",
+          "run": 1,
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Tous les items de la checklist phase 04 sont satisfaits : UAT plan avec périmètre/acteurs/critères entrée-sortie et scénarios tracés vers FR et CS ; checklist déploiement couvrant env (noms seuls, sans valeurs), migratio"
+        },
+        {
+          "id": "good-transition",
+          "phase": "04",
+          "truth": "PASS",
+          "run": 2,
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Tous les items de la checklist Phase 04 sont satisfaits : UAT (périmètre, acteurs, entrées/sorties, scénarios tracés FR/CS), déploiement (env, migrations, backup, rollback, monitoring), template feedback (fonctionne/écho"
+        },
+        {
+          "id": "good-transition",
+          "phase": "04",
+          "truth": "PASS",
+          "run": 3,
+          "predicted": "PASS",
+          "correct": true,
+          "reason": "Checklist phase 04 conforme : UAT (périmètre/acteurs/critères), scénarios tracés vers FR+CS, checklist déploiement (env/migrations/backup/rollback/monitoring), template feedback structuré, backlog priorisé et traçable, s"
+        }
+      ]
+    },
+    {
+      "ts": "2026-08-03 09:12",
+      "metrics": {
+        "accuracy": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "fn_rate": 0.0,
+        "fp_rate": 0.0,
+        "n": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "runs": 1,
+        "stable_cases": 0,
+        "instable_cases": []
+      },
+      "cases": [
+        {
+          "id": "good-brc",
+          "phase": "01",
+          "truth": "PASS",
+          "run": 1,
+          "predicted": "PARSE_FAIL",
+          "correct": null,
+          "reason": "TIMEOUT (> 180s)"
+        }
+      ]
+    },
+    {
+      "ts": "2026-08-03 09:18",
+      "metrics": {
+        "accuracy": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "fn_rate": 0.0,
+        "fp_rate": 0.0,
+        "n": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "runs": 1,
+        "stable_cases": 0,
+        "instable_cases": []
+      },
+      "cases": [
+        {
+          "id": "good-brc",
+          "phase": "01",
+          "truth": "PASS",
+          "run": 1,
+          "predicted": "PARSE_FAIL",
+          "correct": null,
+          "reason": "TIMEOUT (> 150s)"
+        }
+      ]
+    }
+  ]
+}

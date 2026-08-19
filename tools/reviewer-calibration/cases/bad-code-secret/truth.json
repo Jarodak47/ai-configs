@@ -1,0 +1,9 @@
+{
+  "phase": "03",
+  "verdict": "FAIL",
+  "issues": [
+    "secret codé en dur dans le code (clé API)",
+    "doit être une variable d'environnement référencée par nom"
+  ],
+  "description": "Secret (clé API factice) codé en dur : violation des règles de sécurité AGENTS.md."
+}

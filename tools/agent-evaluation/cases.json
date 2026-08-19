@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "cases": [
+    {
+      "id": "architect-good-hexagonal",
+      "agent": "architect",
+      "truth": "PASS",
+      "phase": "03",
+      "instruction": "Review the fixture for adherence to the documented hexagonal architecture. Return the standard structured verdict.",
+      "files": {
+        "docs/02-elaboration/architecture.md": "Architecture: Hexagonal. Domain must not import infrastructure.",
+        "docs/status.md": "Iteration: 1",
+        "src/domain/order.py": "class Order:\n    def total(self):\n        return 10\n",
+        "src/adapters/order_repository.py": "from src.domain.order import Order\n\nclass OrderRepository:\n    def get(self):\n        return Order()\n"
+      }
+    },
+    {
+      "id": "architect-bad-dependency-direction",
+      "agent": "architect",
+      "truth": "FAIL",
+      "phase": "03",
+      "instruction": "Review the fixture for adherence to the documented hexagonal architecture. Return the standard structured verdict.",
+      "files": {
+        "docs/02-elaboration/architecture.md": "Architecture: Hexagonal. Domain must not import infrastructure.",
+        "docs/status.md": "Iteration: 1",
+        "src/infrastructure/database.py": "class Database: pass\n",
+        "src/domain/order.py": "from src.infrastructure.database import Database\n\nclass Order:\n    database = Database()\n"
+      }
+    },
+    {
+      "id": "security-good-ownership",
+      "agent": "security-reviewer",
+      "truth": "PASS",
+      "phase": "03",
+      "instruction": "Perform a bounded authorization/IDOR security review on this tiny calibration fixture. Treat the attached deterministic scan as evidence. Do not run external tools; trace the function manually and return the structured verdict.",
+      "files": {
+        "app.py": "def get_profile(session_user_id, requested_user_id, store):\n    if session_user_id != requested_user_id:\n        raise PermissionError('forbidden')\n    return store[requested_user_id]\n",
+        "test_app.py": "from app import get_profile\n\ndef test_rejects_idor():\n    try:\n        get_profile(1, 2, {2: {'email': 'x'}})\n        assert False\n    except PermissionError:\n        pass\n",
+        "docs/03-construction/security-scan.md": "critical: 0; medium: 0; no committed secrets"
+      }
+    },
+    {
+      "id": "security-bad-idor",
+      "agent": "security-reviewer",
+      "truth": "FAIL",
+      "phase": "03",
+      "instruction": "Perform a bounded authorization/IDOR security review on this tiny calibration fixture. Treat the attached deterministic scan as evidence. Do not run external tools; trace the function manually and return the structured verdict.",
+      "files": {
+        "app.py": "def get_profile(requested_user_id, store):\n    return store[requested_user_id]\n",
+        "docs/03-construction/security-scan.md": "critical: 0; medium: 0; no committed secrets"
+      }
+    },
+    {
+      "id": "design-good-handoff",
+      "agent": "design-reviewer",
+      "truth": "PASS",
+      "phase": "02",
+      "instruction": "Review the design handoff fixture against the design-system, traceability, responsive, states, and accessibility criteria. Return the structured verdict.",
+      "files": {
+        "docs/01-inception/brc.md": "FR-01: User can sign in.",
+        "docs/02-elaboration/test-cases.md": "Feature: FR-01 sign in\nScenario: SC-01 successful sign in\nGiven a registered user\nWhen valid credentials are submitted\nThen the dashboard is shown\nScenario: SC-02 invalid credentials\nGiven a registered user\nWhen invalid credentials are submitted\nThen an accessible error is announced.",
+        "docs/02-elaboration/ui-ux/tokens.json": "{\"color.action.primary\":\"#0057ff\",\"color.action.primaryHover\":\"#0046cc\",\"color.action.disabled\":\"#9ca3af\",\"color.border.default\":\"#6b7280\",\"color.text.default\":\"#111827\",\"color.text.onPrimary\":\"#ffffff\",\"color.text.error\":\"#b42318\",\"color.surface.default\":\"#ffffff\",\"color.surface.error\":\"#fef3f2\",\"space.2xs\":\"4px\",\"space.xs\":\"8px\",\"space.sm\":\"12px\",\"space.md\":\"16px\",\"space.lg\":\"24px\",\"space.xl\":\"32px\",\"space.2xl\":\"48px\",\"space.3xl\":\"64px\",\"border.width.default\":\"1px\",\"control.height\":\"44px\",\"layout.breakpoint.tablet\":\"768px\",\"layout.breakpoint.desktop\":\"1024px\",\"layout.content.formMax\":\"480px\",\"layout.content.pageMax\":\"720px\",\"radius.md\":\"8px\",\"font.body.family\":\"Inter\",\"font.body.size\":\"16px\",\"font.body.weight\":\"400\",\"font.body.lineHeight\":\"24px\",\"font.heading.size\":\"28px\",\"font.heading.weight\":\"700\",\"font.heading.lineHeight\":\"34px\",\"shadow.focus\":\"0 0 0 3px #111827\",\"motion.fast\":\"150ms\"}",
+        "docs/02-elaboration/ui-ux/components.md": "Content strings: email label 'Email address'; password label 'Password'; submit label 'Sign in'; loading label 'Signing in…'; invalid error 'Email address or password is incorrect'; dashboard heading 'Dashboard'; dashboard welcome 'Welcome, {userName}'. EmailField: type=email, autocomplete=email, inputmode=email, visible label using font.body family/size/weight/lineHeight, height control.height, horizontal padding space.md, border border.width.default color.border.default, radius radius.md, input text uses font.body tokens; focus-visible shadow.focus. PasswordField: type=password, autocomplete=current-password, visible label and same tokenized field styling. SubmitButton: height control.height, padding space.xs space.md, radius radius.md, text color.text.onPrimary and font.body tokens, default color.action.primary, hover color.action.primaryHover, disabled color.action.disabled, focus-visible shadow.focus. LoginForm props: email, password, status(default|loading|error), errorMessage, onSubmit. Structure: EmailField, PasswordField, SubmitButton, role=alert ErrorMessage. Auto-layout vertical, gap space.md, padding space.md. Loading disables submit and exposes aria-busy=true. ErrorMessage uses color.text.error on color.surface.error and font.body tokens, receives focus and announces role=alert. Keyboard order: email, password, submit. DashboardScreen props: userName; semantic main with h1 'Dashboard' using font.heading tokens and welcome text 'Welcome, {userName}' using font.body tokens; focus moves to h1 after successful navigation.",
+        "docs/02-elaboration/ui-ux/layout.md": "Traceability: FR-01 -> LoginScreen -> SC-01 and SC-02; successful SC-01 navigates to DashboardScreen. Mobile below layout.breakpoint.tablet: one column, space.md gutters, form and dashboard fill available width. Tablet from layout.breakpoint.tablet to layout.breakpoint.desktop: LoginForm and DashboardScreen centered and capped at layout.content.formMax. Desktop from layout.breakpoint.desktop: DashboardScreen centered and capped at layout.content.pageMax; LoginForm remains capped at layout.content.formMax. Constraints: container stretches to viewport then caps; fields stretch horizontally. Login states: default, loading, error. Dashboard state: authenticated success. Contrast target WCAG AA; labels remain visible; focus order follows document order."
+      }
+    },
+    {
+      "id": "design-bad-untraceable",
+      "agent": "design-reviewer",
+      "truth": "FAIL",
+      "phase": "02",
+      "instruction": "Review the design handoff fixture against the design-system, traceability, responsive, states, and accessibility criteria. Return the structured verdict.",
+      "files": {
+        "docs/01-inception/brc.md": "FR-01: User can sign in.",
+        "docs/02-elaboration/ui-ux/components.md": "A blue login box with email and password.",
+        "docs/02-elaboration/ui-ux/layout.md": "Desktop layout only."
+      }
+    }
+  ]
+}

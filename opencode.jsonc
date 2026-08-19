@@ -1,0 +1,21 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  // Modèle par défaut volontairement non fixé — choisi interactivement à chaque session.
+  "agent": {
+    "plan": {
+      "description": "Plan Mode : analyse, propose un plan structuré (quoi / ordre / hypothèses / questions) et ne modifie rien sans approbation explicite. Respecte la règle plan-first d'AGENTS.md.",
+      "permission": {
+        "edit": "deny",
+        "bash": "ask"
+      }
+    }
+  },
+  "permission": {
+    "read": {
+      "*.env": "deny",
+      "*.env.*": "deny",
+      "*.env.example": "allow",
+      "*": "allow"
+    }
+  }
+}

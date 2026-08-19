@@ -1,0 +1,9 @@
+{
+  "phase": "04",
+  "verdict": "FAIL",
+  "issues": [
+    "les scénarios UAT ne sont pas tracés vers les exigences fonctionnelles (FR) ni vers les critères de succès — aucun mapping FR/scénario",
+    "le backlog d'amélioration n'est pas priorisé (pas de P0/P1/P2) ni tracé vers une source de feedback identifiable"
+  ],
+  "description": "Transition incomplète : plan UAT sans mapping FR -> scénario -> critère de succès, backlog non priorisé ni tracé."
+}
