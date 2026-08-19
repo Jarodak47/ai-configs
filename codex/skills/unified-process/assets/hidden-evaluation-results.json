@@ -1,0 +1,23 @@
+{
+  "dataset_version": "2.1",
+  "valid": true,
+  "verdict_protocol_version": "1.0",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "high",
+  "runs": [
+    {"case_id":"hid-func-01","case_version":"1.0.0","artifact_sha256":"3122c59cd3dadbb28865ff918771932055df3b72defc5ed45253d1a5b6892c6e","run":1,"predicted":"FAIL"},
+    {"case_id":"hid-func-02","case_version":"1.0.0","artifact_sha256":"27d2f14ffe019b3acfdc933f475fcce08ceb5f3a9c2e7c1194997d1912eacedb","run":1,"predicted":"PASS"},
+    {"case_id":"hid-arch-01","case_version":"1.0.0","artifact_sha256":"25fbdd2f2329249d25da7f0783918e32553b543386c490040934cf6afb0b8e66","run":1,"predicted":"FAIL"},
+    {"case_id":"hid-arch-02","case_version":"1.0.0","artifact_sha256":"c1391d4a662c942b41e968c4ce192042de5a7c39f50640e5e77675504319c04c","run":1,"predicted":"PASS"},
+    {"case_id":"hid-sec-01","case_version":"1.0.0","artifact_sha256":"19040ee717ce8cad174ae51cdeefe9923cd3836bb202ede4f4bee07d8956cd02","run":1,"predicted":"FAIL"},
+    {"case_id":"hid-sec-02","case_version":"1.0.0","artifact_sha256":"3e506cc4d6415ada68e48f008be044eac54bbc85c378c664e18d6a8b5490c6d4","run":1,"predicted":"PASS"},
+    {"case_id":"hid-design-01","case_version":"1.0.0","artifact_sha256":"ad980c6cca56b2dbd9d5117d6dd8ceb26aa7da41d8692d87933ec6ef18e38a86","run":1,"predicted":"FAIL"},
+    {"case_id":"hid-design-02","case_version":"1.0.0","artifact_sha256":"1ca8953e97a81374e8f24cc9a538186cb3d4b676bc68b94c9b1d543fd69d6645","run":1,"predicted":"PASS"}
+  ],
+  "infrastructure_errors": [],
+  "audit_notes": [
+    "Each hidden case was executed exactly once after the calibration baseline and prompts were frozen.",
+    "No reviewer was rerun on disagreement and no fixture or prompt was modified between hidden batches.",
+    "Protected expected labels were never included in reviewer prompts."
+  ]
+}

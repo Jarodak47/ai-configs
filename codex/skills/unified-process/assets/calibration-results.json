@@ -1,0 +1,40 @@
+{
+  "dataset_version": "3.1",
+  "valid": true,
+  "verdict_protocol_version": "1.0",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "high",
+  "runs": [
+    {"case_id":"cal-func-01","case_version":"1.4.0","artifact_sha256":"b70906d0bc87bcc2be92870adb59b6fd3fb87390a9ce61dd8a3b79694a99e44e","run":1,"predicted":"PASS"},
+    {"case_id":"cal-func-01","case_version":"1.4.0","artifact_sha256":"b70906d0bc87bcc2be92870adb59b6fd3fb87390a9ce61dd8a3b79694a99e44e","run":2,"predicted":"PASS"},
+    {"case_id":"cal-func-01","case_version":"1.4.0","artifact_sha256":"b70906d0bc87bcc2be92870adb59b6fd3fb87390a9ce61dd8a3b79694a99e44e","run":3,"predicted":"PASS"},
+    {"case_id":"cal-func-02","case_version":"1.0.0","artifact_sha256":"69c7413d355211920d29e7735474434e663eb8cfdd83db29422afff794792df1","run":1,"predicted":"FAIL"},
+    {"case_id":"cal-func-02","case_version":"1.0.0","artifact_sha256":"69c7413d355211920d29e7735474434e663eb8cfdd83db29422afff794792df1","run":2,"predicted":"FAIL"},
+    {"case_id":"cal-func-02","case_version":"1.0.0","artifact_sha256":"69c7413d355211920d29e7735474434e663eb8cfdd83db29422afff794792df1","run":3,"predicted":"FAIL"},
+    {"case_id":"cal-arch-01","case_version":"1.0.0","artifact_sha256":"13f4a8413390cebf3eaff67cb3049ca76c069ab9e8f492f7cfd2fc5c6dcaa41b","run":1,"predicted":"PASS"},
+    {"case_id":"cal-arch-01","case_version":"1.0.0","artifact_sha256":"13f4a8413390cebf3eaff67cb3049ca76c069ab9e8f492f7cfd2fc5c6dcaa41b","run":2,"predicted":"PASS"},
+    {"case_id":"cal-arch-01","case_version":"1.0.0","artifact_sha256":"13f4a8413390cebf3eaff67cb3049ca76c069ab9e8f492f7cfd2fc5c6dcaa41b","run":3,"predicted":"PASS"},
+    {"case_id":"cal-arch-02","case_version":"1.0.0","artifact_sha256":"06eb84bd53708d2729f674e91ed0e286ec3704a38367ede05ca25de32e36080d","run":1,"predicted":"FAIL"},
+    {"case_id":"cal-arch-02","case_version":"1.0.0","artifact_sha256":"06eb84bd53708d2729f674e91ed0e286ec3704a38367ede05ca25de32e36080d","run":2,"predicted":"FAIL"},
+    {"case_id":"cal-arch-02","case_version":"1.0.0","artifact_sha256":"06eb84bd53708d2729f674e91ed0e286ec3704a38367ede05ca25de32e36080d","run":3,"predicted":"FAIL"},
+    {"case_id":"cal-sec-01","case_version":"1.0.0","artifact_sha256":"d675cbb51255233c69b73739d45ce92479fb33bd19580794d91c06aad403db57","run":1,"predicted":"PASS"},
+    {"case_id":"cal-sec-01","case_version":"1.0.0","artifact_sha256":"d675cbb51255233c69b73739d45ce92479fb33bd19580794d91c06aad403db57","run":2,"predicted":"PASS"},
+    {"case_id":"cal-sec-01","case_version":"1.0.0","artifact_sha256":"d675cbb51255233c69b73739d45ce92479fb33bd19580794d91c06aad403db57","run":3,"predicted":"PASS"},
+    {"case_id":"cal-sec-02","case_version":"1.0.0","artifact_sha256":"0c9b5ba8667c7ba66a3d2b478f6d776ae44197b9f21825802b5020af168a0cab","run":1,"predicted":"FAIL"},
+    {"case_id":"cal-sec-02","case_version":"1.0.0","artifact_sha256":"0c9b5ba8667c7ba66a3d2b478f6d776ae44197b9f21825802b5020af168a0cab","run":2,"predicted":"FAIL"},
+    {"case_id":"cal-sec-02","case_version":"1.0.0","artifact_sha256":"0c9b5ba8667c7ba66a3d2b478f6d776ae44197b9f21825802b5020af168a0cab","run":3,"predicted":"FAIL"},
+    {"case_id":"cal-design-01","case_version":"1.1.0","artifact_sha256":"5e2494811d99245fa89a4096faa5d627bc92cc282df22a24813fd3bd23cbd329","run":1,"predicted":"PASS"},
+    {"case_id":"cal-design-01","case_version":"1.1.0","artifact_sha256":"5e2494811d99245fa89a4096faa5d627bc92cc282df22a24813fd3bd23cbd329","run":2,"predicted":"PASS"},
+    {"case_id":"cal-design-01","case_version":"1.1.0","artifact_sha256":"5e2494811d99245fa89a4096faa5d627bc92cc282df22a24813fd3bd23cbd329","run":3,"predicted":"PASS"},
+    {"case_id":"cal-design-02","case_version":"1.0.0","artifact_sha256":"e9658f9ddf946cb60fc63be3b41947cb6d6c95f08a439eefe31d571541daef7d","run":1,"predicted":"FAIL"},
+    {"case_id":"cal-design-02","case_version":"1.0.0","artifact_sha256":"e9658f9ddf946cb60fc63be3b41947cb6d6c95f08a439eefe31d571541daef7d","run":2,"predicted":"FAIL"},
+    {"case_id":"cal-design-02","case_version":"1.0.0","artifact_sha256":"e9658f9ddf946cb60fc63be3b41947cb6d6c95f08a439eefe31d571541daef7d","run":3,"predicted":"FAIL"}
+  ],
+  "infrastructure_errors": [],
+  "audit_notes": [
+    "Only schema-valid outputs from fresh independent reviewers are included.",
+    "Earlier labeled-ID results and every stale fixture-hash result were invalidated before scoring.",
+    "Adversarial reviewers exposed and helped remove ambiguous functional, architecture, and design PASS fixtures before the baseline was frozen.",
+    "Protected expected labels were never included in reviewer prompts."
+  ]
+}

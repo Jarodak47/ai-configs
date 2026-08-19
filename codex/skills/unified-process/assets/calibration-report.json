@@ -1,0 +1,54 @@
+{
+  "generated_at": "2026-08-03",
+  "status": "accepted",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "high",
+  "verdict_protocol_version": "1.0",
+  "calibration": {
+    "dataset_version": "3.1",
+    "runs_scored": 24,
+    "cases": 8,
+    "runs_per_case": 3,
+    "accuracy": 1.0,
+    "fail_precision": 1.0,
+    "fail_recall": 1.0,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "stability": 1.0,
+    "infrastructure_errors": 0
+  },
+  "hidden": {
+    "dataset_version": "2.1",
+    "runs_scored": 8,
+    "cases": 8,
+    "runs_per_case": 1,
+    "accuracy": 1.0,
+    "fail_precision": 1.0,
+    "fail_recall": 1.0,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "stability": null,
+    "infrastructure_errors": 0,
+    "execution_policy": "exactly once per frozen case"
+  },
+  "scope": "Balanced raw mini-artifacts for functional, architecture, security, and design reviewers, with neutral IDs and protected labels.",
+  "controls": [
+    "Fresh independent reviewer context for every prediction.",
+    "Exact structured-verdict validation before a prediction can be recorded.",
+    "Per-case semantic versions and SHA-256 artifact binding enforced by the scorer.",
+    "Expected labels omitted from reviewer prompts and result files.",
+    "Hidden fixtures and prompts frozen before their single execution."
+  ],
+  "invalidated_attempts": [
+    "An earlier baseline was rejected because case identifiers leaked PASS/FAIL labels.",
+    "Stale fixture responses, malformed schemas, inverted metadata, and non-enum severities were excluded before scoring.",
+    "Adversarial calibration findings led to versioned improvements of positive functional, architecture, and design fixtures; prior hashes were invalidated."
+  ],
+  "limitations": [
+    "Sixteen mini-artifacts are a focused harness, not a substitute for evaluation on full production repositories.",
+    "The balanced dataset does not estimate real-world defect prevalence.",
+    "Hidden stability is intentionally not measured because each hidden case was executed only once.",
+    "Metrics apply only to the recorded model, reasoning effort, prompts, fixtures, and verdict protocol.",
+    "Future prompt or reviewer changes require a new calibration baseline and a newly versioned hidden set."
+  ]
+}

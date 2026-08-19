@@ -1,0 +1,4 @@
+interface:
+  display_name: "Unified Process AI"
+  short_description: "Piloter les quatre phases avec des gates fiables"
+  default_prompt: "Use $unified-process to run this project with the appropriate execution mode and validation gates."

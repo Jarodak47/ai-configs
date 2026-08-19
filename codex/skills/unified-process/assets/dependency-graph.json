@@ -1,0 +1,9 @@
+{
+  "schema_version": "1.0",
+  "nodes": [
+    {"id": "phase-01-brc", "depends_on": [], "status": "pending"},
+    {"id": "phase-02-models", "depends_on": ["phase-01-brc"], "status": "pending"},
+    {"id": "phase-03-construction", "depends_on": ["phase-02-models"], "status": "pending"},
+    {"id": "phase-04-transition", "depends_on": ["phase-03-construction"], "status": "pending"}
+  ]
+}

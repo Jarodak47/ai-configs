@@ -1,0 +1,113 @@
+model = "gpt-5.6-sol"
+model_reasoning_effort = "low"
+personality = "friendly"
+service_tier = "default"
+
+[plugins."remotion@openai-curated"]
+enabled = true
+
+[plugins."figma@openai-curated"]
+enabled = true
+
+[plugins."google-calendar@openai-curated"]
+enabled = true
+
+[plugins."slack@openai-curated"]
+enabled = true
+
+[plugins."apollo@claude-cowork"]
+enabled = true
+
+[plugins."bio-research@claude-cowork"]
+enabled = true
+
+[plugins."brand-voice@claude-cowork"]
+enabled = true
+
+[plugins."common-room@claude-cowork"]
+enabled = true
+
+[plugins."cowork-plugin-management@claude-cowork"]
+enabled = true
+
+[plugins."customer-support@claude-cowork"]
+enabled = true
+
+[plugins."data@claude-cowork"]
+enabled = true
+
+[plugins."design@claude-cowork"]
+enabled = true
+
+[plugins."engineering@claude-cowork"]
+enabled = true
+
+[plugins."enterprise-search@claude-cowork"]
+enabled = true
+
+[plugins."finance@claude-cowork"]
+enabled = true
+
+[plugins."human-resources@claude-cowork"]
+enabled = true
+
+[plugins."legal@claude-cowork"]
+enabled = true
+
+[plugins."marketing@claude-cowork"]
+enabled = true
+
+[plugins."operations@claude-cowork"]
+enabled = true
+
+[plugins."product-management@claude-cowork"]
+enabled = true
+
+[plugins."productivity@claude-cowork"]
+enabled = true
+
+[plugins."sales@claude-cowork"]
+enabled = true
+
+[plugins."slack-by-salesforce@claude-cowork"]
+enabled = true
+
+[plugins."documents@openai-primary-runtime"]
+enabled = true
+
+[plugins."pdf@openai-primary-runtime"]
+enabled = true
+
+[plugins."spreadsheets@openai-primary-runtime"]
+enabled = true
+
+[plugins."presentations@openai-primary-runtime"]
+enabled = true
+
+[plugins."template-creator@openai-primary-runtime"]
+enabled = true
+
+[plugins."browser@openai-bundled"]
+enabled = true
+
+[plugins."visualize@openai-bundled"]
+enabled = true
+
+[plugins."chrome@openai-bundled"]
+enabled = true
+
+[plugins."sites@openai-bundled"]
+enabled = true
+
+[features]
+js_repl = false
+
+[desktop]
+external-agent-import-sync-enabled = false
+conversationDetailMode = "STEPS_COMMANDS"
+ambient-suggestions-enabled = true
+followUpQueueMode = "queue"
+realtimeVoiceScreenContextEnabled = true
+
+[mcp_servers.figma]
+url = "https://mcp.figma.com/mcp"
