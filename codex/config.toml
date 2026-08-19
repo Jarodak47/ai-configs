@@ -3,6 +3,69 @@ model_reasoning_effort = "low"
 personality = "friendly"
 service_tier = "default"
 
+[projects."/Users/jarodak47/Desktop/Projets/cyberTickets"]
+trust_level = "trusted"
+
+[projects."/Users/jarodak47/Desktop/Projets/HTT/carte-grise"]
+trust_level = "trusted"
+
+[projects."/Users/jarodak47/Desktop/Projets/captive-portal"]
+trust_level = "trusted"
+
+[projects."/Users/jarodak47/Desktop/Projets/HTT/items"]
+trust_level = "trusted"
+
+[projects."/Users/jarodak47/Documents/Codex/2026-08-01/adobe-formerly-photoshop-plugin-app-69312da8e4dc81919370cb86fd172b6c"]
+trust_level = "trusted"
+
+[projects."/Users/jarodak47/Documents/Codex/2026-08-03/co"]
+trust_level = "trusted"
+
+[projects."/Users/jarodak47"]
+trust_level = "trusted"
+
+[projects."/Users/jarodak47/Documents/Codex/2026-08-03/realtime-voice-chat"]
+trust_level = "trusted"
+
+[projects."/Users/jarodak47/Documents/Codex/2026-08-03/realtime-voice-chat-2"]
+trust_level = "trusted"
+
+[projects."/Users/jarodak47/Documents/Codex/2026-08-03/realtime-voice-chat-3"]
+trust_level = "trusted"
+
+[projects."/Users/jarodak47/Documents/Codex/2026-08-04/le-fichier-etude-fonctionnelle-et-technique"]
+trust_level = "trusted"
+
+[projects."/Users/jarodak47/Documents/Codex/2026-08-05/from-the-july-31-htt-meeting"]
+trust_level = "trusted"
+
+[projects."/Users/jarodak47/Documents/Codex/2026-08-05/review-the-34-emploi-cm-matches"]
+trust_level = "trusted"
+
+[projects."/Users/jarodak47/Documents/Codex/2026-08-09/tu"]
+trust_level = "trusted"
+
+[projects."/Users/jarodak47/Desktop/Projets/FolioTray"]
+trust_level = "trusted"
+
+[projects."/Users/jarodak47/Documents/Codex/2026-08-10/tu"]
+trust_level = "trusted"
+
+[projects."/Users/jarodak47/Documents/Codex/2026-08-10/summarize-this-report"]
+trust_level = "trusted"
+
+[projects."/Users/jarodak47/Documents/Codex/2026-08-11/re"]
+trust_level = "trusted"
+
+[projects."/Users/jarodak47/Desktop/Projets/montage Video"]
+trust_level = "trusted"
+
+[projects."/Users/jarodak47/Desktop/Projets/xflow-services"]
+trust_level = "trusted"
+
+[projects."/Users/jarodak47/Documents/Codex/2026-08-14/using-my-connected-cv-create-a"]
+trust_level = "trusted"
+
 [plugins."remotion@openai-curated"]
 enabled = true
 
@@ -99,8 +162,28 @@ enabled = true
 [plugins."sites@openai-bundled"]
 enabled = true
 
+[marketplaces.openai-bundled]
+last_updated = "2026-08-17T09:08:41Z"
+source_type = "local"
+source = "/Users/jarodak47/.codex/.tmp/bundled-marketplaces/openai-bundled"
+
+[marketplaces.claude-cowork]
+last_updated = "2026-08-01T15:26:48Z"
+source_type = "local"
+source = "/Users/jarodak47/.codex/plugins/cache/claude-cowork"
+
+[marketplaces.openai-primary-runtime]
+last_updated = "2026-08-14T12:32:50Z"
+source_type = "local"
+source = "/Users/jarodak47/.cache/codex-runtimes/codex-primary-runtime/plugins/openai-primary-runtime"
+
 [features]
 js_repl = false
+
+[shell_environment_policy.set]
+BROWSER_USE_AVAILABLE_BACKENDS = "chrome,iab"
+NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S = "9230e2bd8b24b7ac7a0ba6774c64bf0d78ecdabbdd91d0ed627b02a587bae2df"
+NODE_REPL_TRUSTED_CODE_PATHS = "/Users/jarodak47/.codex:/Applications/ChatGPT.app/Contents/Resources/cua_node/lib/node_modules"
 
 [desktop]
 external-agent-import-sync-enabled = false
@@ -108,6 +191,32 @@ conversationDetailMode = "STEPS_COMMANDS"
 ambient-suggestions-enabled = true
 followUpQueueMode = "queue"
 realtimeVoiceScreenContextEnabled = true
+
+[mcp_servers.node_repl]
+args = []
+command = "/Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node_repl"
+startup_timeout_sec = 120
+
+[mcp_servers.node_repl.env]
+NODE_REPL_NATIVE_PIPE_CONNECT_TIMEOUT_MS = "1000"
+NODE_REPL_NODE_MODULE_DIRS = "/Applications/ChatGPT.app/Contents/Resources/cua_node/lib/node_modules"
+NODE_REPL_NODE_PATH = "/Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node"
+NODE_REPL_TRUSTED_CODE_PATHS = "/Users/jarodak47/.codex:/Applications/ChatGPT.app/Contents/Resources/cua_node/lib/node_modules"
+CODEX_HOME = "/Users/jarodak47/.codex"
+NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S = "9230e2bd8b24b7ac7a0ba6774c64bf0d78ecdabbdd91d0ed627b02a587bae2df"
+BROWSER_USE_AVAILABLE_BACKENDS = "chrome,iab"
+NODE_REPL_INSTRUCTIONS_USE_CASE_BROWSER = "Control the in-app browser in conjunction with the Browser Plugin."
+NODE_REPL_INSTRUCTIONS_USE_CASE_CHROME = "Control the Chrome browser in conjunction with the Chrome Plugin. Prefer this method of controlling Chrome over alternatives (such as Computer Use) unless the user explicitly mentions an alternative."
+NODE_REPL_INSTRUCTIONS_USE_CASE_COMPUTER_USE = "Control desktop apps on macOS through Computer Use."
+BROWSER_USE_CODEX_APP_BUILD_FLAVOR = "prod"
+BROWSER_USE_CODEX_APP_VERSION = "26.810.52044"
+CODEX_CLI_PATH = "/Applications/ChatGPT.app/Contents/Resources/codex"
+
+[mcp_servers.computer-use]
+command = "./Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient"
+args = ["mcp"]
+cwd = "."
+enabled = false
 
 [mcp_servers.figma]
 url = "https://mcp.figma.com/mcp"

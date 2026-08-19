@@ -1,7 +1,7 @@
 {
   "mcpServers": {
     "GitKraken": {
-      "command": "gk",
+      "command": "/Users/jarodak47/Library/Application Support/Cursor/User/globalStorage/eamodio.gitlens/gk",
       "type": "stdio",
       "name": "GitKraken",
       "args": [
@@ -11,6 +11,27 @@
         "--scheme=cursor"
       ],
       "env": {}
+    },
+    "notebooks": {
+      "command": "node",
+      "args": [
+        "/Users/jarodak47/.cursor/extensions/googlecloudtools.datacloud-0.7.2-universal/mcp_servers/cli/mcp_proxy_bundle.js",
+        "notebooks-cursor"
+      ]
+    },
+    "visualization": {
+      "command": "node",
+      "args": [
+        "/Users/jarodak47/.cursor/extensions/googlecloudtools.datacloud-0.7.2-universal/mcp_servers/cli/mcp_proxy_bundle.js",
+        "visualization-cursor"
+      ]
+    },
+    "context": {
+      "command": "node",
+      "args": [
+        "/Users/jarodak47/.cursor/extensions/googlecloudtools.datacloud-0.7.2-universal/mcp_servers/cli/mcp_proxy_bundle.js",
+        "context-cursor"
+      ]
     }
   }
 }
