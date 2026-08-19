@@ -1,0 +1,6 @@
+logs/
+session-state/
+jb/
+ide/
+*.log
+.DS_Store

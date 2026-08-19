@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "hooks": {
+    "preToolUse": [
+      {
+        "type": "command",
+        "bash": "node \"/Users/jarodak47/.copilot/hooks/googlecloudtools.datacloud_telemetry_bundle.js\" --agent_name copilot --install_source \"Visual Studio Code\" ; exit 0",
+        "powershell": "node \"/Users/jarodak47/.copilot/hooks/googlecloudtools.datacloud_telemetry_bundle.js\" --agent_name copilot --install_source \"Visual Studio Code\" ; exit 0",
+        "timeoutSec": 30
+      }
+    ]
+  }
+}

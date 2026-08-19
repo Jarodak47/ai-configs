@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "hooks": {
+    "preToolUse": [
+      {
+        "command": "node \"/Users/jarodak47/.cursor/googlecloudtools.datacloud_telemetry_bundle.js\" --agent_name cursor --install_source \"Cursor\""
+      }
+    ]
+  }
+}

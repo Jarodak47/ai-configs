@@ -1,0 +1,6 @@
+extensions/
+projects/
+plans/
+statsig-cache.json
+ide_state.json
+.DS_Store

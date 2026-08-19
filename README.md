@@ -9,6 +9,9 @@ Centralized AI tool configurations for all machines.
 | AGENTS.md | `AGENTS.md` | `cp AGENTS.md ~/AGENTS.md` |
 | opencode | `opencode/` | `cp -r opencode/* ~/.config/opencode/` |
 | codex | `codex/` | `cp -r codex/* ~/.codex/` |
+| cursor | `cursor/` | `cp -r cursor/* ~/.cursor/` |
+| claude | `claude/` | Claude reads `~/AGENTS.md` directly |
+| copilot | `copilot/` | `cp -r copilot/* ~/.copilot/` |
 
 ## Quick Setup
 
@@ -23,4 +26,10 @@ cp -r ~/ai-configs/opencode/* ~/.config/opencode/
 
 # codex
 cp -r ~/ai-configs/codex/* ~/.codex/
+
+# cursor
+cp -r ~/ai-configs/cursor/* ~/.cursor/
+
+# copilot
+cp -r ~/ai-configs/copilot/* ~/.copilot/
 ```
