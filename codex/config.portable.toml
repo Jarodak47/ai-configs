@@ -1,0 +1,114 @@
+# Portable, non-secret snapshot. Merge selected settings manually into config.toml.
+# Plugin availability and model names may change after reinstallation.
+
+model = "gpt-6.1-terra"
+
+[features]
+js_repl = false
+memories = true
+
+[memories]
+generate_memories = true
+use_memories = true
+
+[plugins."remotion@openai-curated"]
+enabled = true
+
+[plugins."figma@openai-curated"]
+enabled = true
+
+[plugins."google-calendar@openai-curated"]
+enabled = true
+
+[plugins."slack@openai-curated"]
+enabled = true
+
+[plugins."apollo@claude-cowork"]
+enabled = true
+
+[plugins."bio-research@claude-cowork"]
+enabled = true
+
+[plugins."brand-voice@claude-cowork"]
+enabled = true
+
+[plugins."common-room@claude-cowork"]
+enabled = true
+
+[plugins."cowork-plugin-management@claude-cowork"]
+enabled = true
+
+[plugins."customer-support@claude-cowork"]
+enabled = true
+
+[plugins."data@claude-cowork"]
+enabled = true
+
+[plugins."design@claude-cowork"]
+enabled = true
+
+[plugins."engineering@claude-cowork"]
+enabled = true
+
+[plugins."enterprise-search@claude-cowork"]
+enabled = true
+
+[plugins."finance@claude-cowork"]
+enabled = true
+
+[plugins."human-resources@claude-cowork"]
+enabled = true
+
+[plugins."legal@claude-cowork"]
+enabled = true
+
+[plugins."marketing@claude-cowork"]
+enabled = true
+
+[plugins."operations@claude-cowork"]
+enabled = true
+
+[plugins."product-management@claude-cowork"]
+enabled = true
+
+[plugins."productivity@claude-cowork"]
+enabled = true
+
+[plugins."sales@claude-cowork"]
+enabled = true
+
+[plugins."slack-by-salesforce@claude-cowork"]
+enabled = true
+
+[plugins."documents@openai-primary-runtime"]
+enabled = true
+
+[plugins."pdf@openai-primary-runtime"]
+enabled = true
+
+[plugins."spreadsheets@openai-primary-runtime"]
+enabled = true
+
+[plugins."presentations@openai-primary-runtime"]
+enabled = true
+
+[plugins."template-creator@openai-primary-runtime"]
+enabled = true
+
+[plugins."visualize@openai-bundled"]
+enabled = true
+
+[plugins."codex-app-tools@openai-bundled"]
+enabled = true
+
+[plugins."browser@openai-bundled"]
+enabled = true
+
+[plugins."unified-computer-use@openai-bundled"]
+enabled = true
+
+[plugins."chrome@openai-bundled"]
+enabled = true
+
+[plugins."computer-use@openai-bundled"]
+enabled = true

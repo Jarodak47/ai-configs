@@ -60,3 +60,7 @@ Copy-Item -Recurse -Force "$HOME\ai-configs\copilot\*" "$HOME\.copilot\"
 ```
 
 > Claude Code reads `AGENTS.md` directly from the home directory. The PowerShell commands above use `$HOME`, which resolves to the current Windows user's home directory.
+
+## Portable Codex workflow
+
+See [portable workflow restoration](codex/PORTABLE-WORKFLOW.md) before copying settings to another machine. Merge selected settings manually; do not overwrite an existing configuration.
